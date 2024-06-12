@@ -11,7 +11,7 @@
     <title>Reckon Stone World - Laterite Stone Manufacturing</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,700" rel="stylesheet">
     
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,107 +24,19 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom_styles.css">
     
-    <!-- Custom Styles -->
-    <style>
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .navbar-dark {
-            background-color: #6b4226;
-        }
-        .site-footer {
-            background-color: #6b4226;
-            color: #fff;
-        }
-        .site-footer a {
-            color: #fff;
-        }
-        .navbar-brand img {
-            height: 50px;
-            display: none;
-        }
-        .navbar-brand span {
-            display: inline;
-        }
-        .navbar.scrolled .navbar-brand img {
-            display: inline;
-        }
-        .navbar.scrolled .navbar-brand span {
-            display: none;
-        }
-
-        /* Custom styles for the new layout */
-        .site-cover {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-        .site-cover .bg {
-            flex: 1;
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .site-cover .bg.active {
-            opacity: 1;
-        }
-        .site-cover .bg.bg1 {
-            background-image: url('images/bg1.jpeg');
-        }
-        .site-cover .bg.bg2 {
-            background-image: url('images/bg2.jpeg');
-        }
-        .site-cover .bg.bg3 {
-            background-image: url('images/bg3.jpeg');
-        }
-        .site-heading-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            z-index: 1;
-        }
-        .site-heading {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .site-subheading {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Media queries for mobile view */
-        @media (min-width: 768px) {
-            .site-cover .bg {
-                opacity: 1;
-                position: static;
-                transition: none;
-            }
-        }
-    </style>
+  
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
 
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light" id="site-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top site_navbar bg-dark site-navbar-light" id="site-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Reckon Stone World Logo">
-                <span>Reckon</span>
+                <span class="full-text">Reckon Stone World</span>
+                <span class="short-text">Reckon</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
@@ -136,6 +48,7 @@
                     <li class="nav-item"><a href="#section-products" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="#section-gallery" class="nav-link">Gallery</a></li>
                     <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="catalogue.html" class="nav-link">Catalogue</a></li>
                 </ul>
             </div>
         </div>
@@ -155,7 +68,6 @@
         </div>
     </section>
 
-    <!-- Other Sections -->
     <!-- About Section -->
     <section class="site-section" id="section-about">
         <div class="container">
@@ -168,10 +80,8 @@
                     <p><a href="#section-contact" class="btn btn-secondary btn-lg">Learn More About Us</a></p>
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
-                    <img src="images/bg4.jpeg" alt="Reckon Stone World" class="img-fluid ">
-
-
+                <div class="col-md-6 site-animate imginabout" data-animate-effect="fadeInRight">
+                    <img src="images/bg4.jpeg" alt="Reckon Stone World" class="img-fluid scale-1-5" />
                 </div>
             </div>
         </div>
@@ -191,50 +101,52 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="owl-carousel site-owl">
+                    <div class="row">
                         <!-- Product Item 1 -->
-                        <div class="item">
-                            <div class="media d-block mb-4 text-center site-media site-animate border-0">
-                                <img src="images/product_1.jpg" alt="Product 1" class="img-fluid">
-                                <div class="media-body p-md-5 p-4">
-                                    <h5 class="text-primary">$19.50</h5>
-                                    <h5 class="mt-0 h4">Stones for Houses</h5>
-                                    <p class="mb-4">Durable and aesthetically pleasing stones perfect for building houses and other structures.</p>
-                                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card site-animate">
+                                <div class="media d-block mb-4 text-center site-media">
+                                    <img src="images/prod1.jpg" alt="Product 1" class="img-fluid product-image">
+                                    <div class="media-body p-md-5 p-4">
+                                        <h5 class="mt-0 h4 product-title">Stones for Houses</h5>
+                                        <p class="mb-4 product-description">Durable and aesthetically pleasing stones perfect for building houses and other structures.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Product Item 2 -->
-                        <div class="item">
-                            <div class="media d-block mb-4 text-center site-media site-animate border-0">
-                                <img src="images/product_2.jpg" alt="Product 2" class="img-fluid">
-                                <div class="media-body p-md-5 p-4">
-                                    <h5 class="text-primary">$29.50</h5>
-                                    <h5 class="mt-0 h4">Wall Stones</h5>
-                                    <p class="mb-4">Ideal for creating sturdy and beautiful walls for both interior and exterior spaces.</p>
-                                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card site-animate">
+                                <div class="media d-block mb-4 text-center site-media">
+                                    <img src="images/prod2.jpg" alt="Product 2" class="img-fluid product-image">
+                                    <div class="media-body p-md-5 p-4">
+                                        <h5 class="mt-0 h4 product-title">Wall Stones</h5>
+                                        <p class="mb-4 product-description">Ideal for creating sturdy and beautiful walls for both interior and exterior spaces.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Product Item 3 -->
-                        <div class="item">
-                            <div class="media d-block mb-4 text-center site-media site-animate border-0">
-                                <img src="images/product_3.jpg" alt="Product 3" class="img-fluid">
-                                <div class="media-body p-md-5 p-4">
-                                    <h5 class="text-primary">$11.50</h5>
-                                    <h5 class="mt-0 h4">Decorative Stones</h5>
-                                    <p class="mb-4">Enhance the beauty of your space with our exquisite decorative laterite stones.</p>
-                                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card site-animate">
+                                <div class="media d-block mb-4 text-center site-media">
+                                    <img src="images/prod3.jpg" alt="Product 3" class="img-fluid product-image">
+                                    <div class="media-body p-md-5 p-4">
+                                        <h5 class="mt-0 h4 product-title">Decorative Stones</h5>
+                                        <p class="mb-4 product-description">Enhance the beauty of your space with our exquisite decorative laterite stones.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Add more products as needed -->
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="catalogue.html" class="btn btn-primary btn-lg view-all-btn">View All <span class="oi oi-arrow-thick-right"></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Gallery Section -->
     <section class="site-section" id="section-gallery">
         <div class="container">
@@ -249,8 +161,8 @@
                 </div>
                 <!-- Gallery Item 1 -->
                 <div class="col-md-4 site-animate">
-                    <a href="images/gallery_1.jpg" class="site-thumbnail image-popup">
-                        <img src="images/gallery_1.jpg" alt="Gallery Image 1" class="img-fluid">
+                    <!-- <a href="images/gallery1.jpeg" class="site-thumbnail image-popup"> -->
+                        <img src="images/gallery1.jpeg" alt="Gallery Image 1" class="img-fluid">
                     </a>
                 </div>
                 <!-- Gallery Item 2 -->
@@ -271,47 +183,28 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="site-section bg-light" id="section-contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center mb-5 site-animate">
-                    <h2 class="display-4">Get In Touch</h2>
-                    <div class="row justify-content-center">
-                        <div class="col-md-7">
-                            <p class="lead">We'd love to hear from you! Whether you have a question about our products or need assistance with an order, feel free to contact us.</p>
-                        </div>
-                    </div>
+    <section class="site-section qr-section">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <h6>SCAN QR CODE</h6>
+                    <img src="images/frame.png" alt="QR Code">
+                  <a href="images/reckoncatalogue.pdf" download="reckoncatalogue.pdf" class="btn-download"><i class="bi bi-download"></i> Download Catalogue</a>
                 </div>
-              
-                <div class="col-md-1"></div>
-                <div class="col-md-4 site-animate">
-                    <p><img src="images/contact_img.jpg" alt="Contact Image" class="img-fluid"></p>
-                    <p class="text-black">
-                        Address: <br>
-                        121 Street, Melbourne Victoria <br>
-                        3000 Australia <br><br>
-                        Phone: <br>
-                        90 987 65 44 <br><br>
-                        Email: <br>
-                        <a href="mailto:info@reckonstoneworld.com">info@reckonstoneworld.com</a>
-                    </p>
+                <div class="col-md-6 text-left qr-text">
+                    <h3 class="highlight">Laterite Stones Redefined, Spaces Reimagined</h3>
+                    <p>Reckon Stone World – a pinnacle of elegance and refinement in the world of laterite stones. Elevating spaces with unparalleled artistry, our brand presents you with premium stones meticulously crafted using state-of-the-art technology. </p>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <!-- Footer Section -->
-    <footer class="site-footer site-bg-dark site-section">
+    <footer class="site-footer site-bg-brown site-section" id="section-contact">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-4 site-animate">
-                            <h2 class="site-heading-2">About Us</h2>
-                            <p>Reckon Stone World is dedicated to providing top-quality laterite stones for construction and decoration. Our stones are known for their durability and aesthetic appeal, making them the perfect choice for any project.</p>
-                        </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-3 site-animate">
                             <div class="site-footer-widget mb-4">
@@ -332,6 +225,20 @@
                                     <li><a href="#" class="py-2 d-block">Wall Stones</a></li>
                                     <li><a href="#" class="py-2 d-block">Decorative Stones</a></li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 site-animate">
+                            <div class="site-footer-widget mb-4">
+                                <h2 class="site-heading-2">Contact</h2>
+                                <p class="text-white">
+                                    Address: <br>
+                                    121 Street, Melbourne Victoria <br>
+                                    3000 Australia <br><br>
+                                    Phone: <br>
+                                    90 987 65 44 <br><br>
+                                    Email: <br>
+                                    <a href="mailto:info@reckonstoneworld.com">info@reckonstoneworld.com</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -355,8 +262,6 @@
         </div>
     </footer>
 
-   
-
     <!-- Loader Section -->
     <div id="site-loader" class="show fullscreen">
         <svg class="circular" width="48px" height="48px">
@@ -376,35 +281,25 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "UA-23581568-13");
-    </script>
-
-    <!-- Cloudflare Insights -->
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vef91dfe02fce4ee0ad053f6de4f175db1715022073587" integrity="sha512-sDIX0kl85v1Cl5tu4WGLZCpH/dV9OHbA4YlKCuCiMmOQIk4buzoYDZSFj+TvC71mOBLh8CDC/REgE0GX0xcbjA==" data-cf-beacon='{"rayId":"89083dcf1f6147e6","b":1,"version":"2024.4.1","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
 
     <!-- Custom Script for Navbar Scrolling -->
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
+                if ($(this).scrollTop() > $('#section-home').height()) {
                     $('.navbar').addClass('scrolled');
                 } else {
                     $('.navbar').removeClass('scrolled');
                 }
             });
-            
+
+            // Scroll to top button functionality
+            $('.scroll-to-top').click(function () {
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+
             // Custom Script for Background Image Rotation
             if (window.innerWidth < 768) {
                 let currentIndex = 0;
@@ -415,7 +310,36 @@
                     images.eq(currentIndex).addClass('active');
                 }, 3000);
             }
+
+            // Add visibility class to product cards on scroll
+            var $animation_elements = $('.product-card');
+            var $window = $(window);
+
+            function check_if_in_view() {
+                var window_height = $window.height();
+                var window_top_position = $window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                $.each($animation_elements, function() {
+                    var $element = $(this);
+                    var element_height = $element.outerHeight();
+                    var element_top_position = $element.offset().top;
+                    var element_bottom_position = (element_top_position + element_height);
+
+                    // Check to see if this current container is within viewport
+                    if ((element_bottom_position >= window_top_position) &&
+                        (element_top_position <= window_bottom_position)) {
+                        $element.addClass('in-view');
+                    } else {
+                        $element.removeClass('in-view');
+                    }
+                });
+            }
+
+            $window.on('scroll resize', check_if_in_view);
+            $window.trigger('scroll');
         });
     </script>
 </body>
+
 </html>
