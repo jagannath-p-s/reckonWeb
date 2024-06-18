@@ -24,25 +24,26 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     
     <!-- Custom Styles -->
     <style>
         body {
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #f0e8d8;
+            color: #4d3219;
             font-family: 'Open Sans', sans-serif;
         }
         .navbar-dark {
-            background-color: #6b4226;
+            background-color: #8c6239;
         }
         .navbar-light {
-            background-color: #f5f5f5;
+            background-color: transparent;
         }
         .navbar-light .navbar-nav .nav-link {
-            color: #333;
+            color: #4d3219;
         }
         .site-footer {
-            background-color: #6b4226;
+            background-color: #8c6239;
             color: #fff;
         }
         .site-footer a {
@@ -62,18 +63,12 @@
         .navbar.scrolled .navbar-brand span {
             display: none;
         }
-        .navbar-mobile {
-            background-color: black;
-        }
-        .navbar-mobile .navbar-nav .nav-link {
-            color: white;
-        }
         @media (max-width: 768px) {
             .navbar-light {
-                background-color: black;
+                background-color: rgba(76, 42, 25, 0.9);
             }
             .navbar-light .navbar-nav .nav-link {
-                color: white;
+                color: #fff;
             }
         }
         @media (min-width: 768px) {
@@ -81,94 +76,113 @@
                 background-color: transparent;
             }
             .navbar-light .navbar-nav .nav-link {
-                color: black;
+                color: #4d3219;
             }
         }
-
         .btn-outline-white {
             border-color: #fff;
             color: #fff;
         }
         .btn-outline-white:hover {
             background-color: #fff;
-            color: #6b4226;
+            color: #8c6239;
         }
-
-        .site-cover {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-        .site-cover .bg {
-            flex: 1;
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .site-cover .bg.active {
-            opacity: 1;
-        }
-        .site-cover .bg.bg1 {
-            background-image: url('images/bg1.jpeg');
-        }
-        .site-cover .bg.bg2 {
-            background-image: url('images/bg2.jpeg');
-        }
-        .site-cover .bg.bg3 {
-            background-image: url('images/bg3.jpeg');
-        }
-        .site-heading-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            z-index: 1;
-        }
-        .site-heading {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .site-subheading {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .scale-1-5 {
-            transform: scale(.8);
-        }
-
-        .imginabout {
-            margin-top: -88px;
-        }
-
         .product-card {
             border: 1px solid #ddd;
-            padding: 15px;
-            margin-bottom: 20px;
-            transition: transform 0.2s;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 100%; /* Ensure uniform height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+           
         }
+        .product-card img {
+        transform: scale(4.5); 
+        transition: transform 0.3s;
+}
         .product-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-
-        @media (min-width: 768px) {
-            .site-cover .bg {
-                opacity: 1;
-                position: static;
-                transition: none;
+        .product-card .product-info {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .product-card .product-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #8c6239;
+            margin-bottom: 10px;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .product-card img:hover {
+            transform: scale(5);
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                margin-bottom: 20px;
             }
         }
+        
+    /* Navbar CSS */
+    .site-navbar-light {
+        background: transparent !important;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    @media screen and (max-width: 991px) {
+        .site-navbar-light {
+            background: rgba(76, 42, 25, 0.9) !important;
+            top: 0;
+            position: relative;
+        }
+    }
+
+    .site-navbar-light .navbar-nav > .nav-item > .nav-link {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media screen and (max-width: 960px) {
+        .site-navbar-light .navbar-nav > .nav-item > .nav-link {
+            padding-bottom: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    .site-navbar-light .navbar-toggler {
+        border: none;
+        color: rgba(255, 255, 255, 0.9) !important;
+        cursor: pointer;
+        padding-right: 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: .1em;
+    }
     </style>
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -203,137 +217,159 @@
                 <div class="col-md-12 text-center mb-5 site-animate">
                     <h4 class="site-sub-title">Our Products</h4>
                     <h2 class="display-4">Catalogue</h2>
-                    <div class="row justify-content-center">
-                        <div class="col-md-7">
-                            <p class="lead">Browse through our extensive catalogue of high-quality laterite stones suitable for various construction and decorative applications.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Product Item 1 -->
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="images/product_1.jpg" alt="Product 1" class="img-fluid">
-                        <h5 class="mt-2">Stones for Houses</h5>
-                        <p class="text-primary">$19.50</p>
-                        <p>Durable and aesthetically pleasing stones perfect for building houses and other structures.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Order Now!</a>
-                    </div>
-                </div>
-                <!-- Product Item 2 -->
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="images/product_2.jpg" alt="Product 2" class="img-fluid">
-                        <h5 class="mt-2">Wall Stones</h5>
-                        <p class="text-primary">$29.50</p>
-                        <p>Ideal for creating sturdy and beautiful walls for both interior and exterior spaces.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Order Now!</a>
-                    </div>
-                </div>
-                <!-- Product Item 3 -->
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="images/product_3.jpg" alt="Product 3" class="img-fluid">
-                        <h5 class="mt-2">Decorative Stones</h5>
-                        <p class="text-primary">$11.50</p>
-                        <p>Enhance the beauty of your space with our exquisite decorative laterite stones.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Order Now!</a>
-                    </div>
-                </div>
-                <!-- Add more product items as needed -->
-            </div>
-        </div>
-    </section>
+                   <div class="row justify-content-center">
+                       <div class="col-md-7">
+                           <p class="lead">Browse through our extensive catalogue of high-quality laterite stones suitable for various construction and decorative applications.</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="row">
+               <!-- Product Item 1 -->
+               <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                   <div class="product-card">
+                       <img src="images/12inx7inx20mm.png" alt="Product 1" class="img-fluid">
+                       <div class="product-info">
+                           <h5 class="product-title">12x7x20 mm</h5>
+                       </div>
+                   </div>
+               </div>
+               <!-- Product Item 2 -->
+               <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                   <div class="product-card">
+                       <img src="images/12x6x6.png"  alt="Product 2" class="img-fluid">
+                       <div class="product-info">
+                           <h5 class="product-title">12x6x3 inches</h5>
+                       </div>
+                   </div>
+               </div>
+               <!-- Product Item 3 -->
+               <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                   <div class="product-card">
+                       <img src="images/12x6x6.png" alt="Product 3" class="img-fluid">
+                       <div class="product-info">
+                           <h5 class="product-title">12x6x6 inches</h5>
+                       </div>
+                   </div>
+               </div>
+               <!-- Product Item 4 -->
+               <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                   <div class="product-card">
+                       <img src="images/6inx6in20mm.png" alt="Product 4" class="img-fluid">
+                       <div class="product-info">
+                           <h5 class="product-title">6x6x20 mm</h5>
+                       </div>
+                   </div>
+               </div>
+               <!-- Product Item 5 -->
+               <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                   <div class="product-card">
+                       <img src="images/12x7x8.png" alt="Product 5" class="img-fluid">
+                       <div class="product-info">
+                           <h5 class="product-title">12x7x8 inches</h5>
+                       </div>
+                   </div>
+               </div>
+               <!-- Product Item 6 -->
+               <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                   <div class="product-card">
+                       <img src="images/9x4x3.png" alt="Product 6" class="img-fluid">
+                       <div class="product-info">
+                           <h5 class="product-title">9x4x3 inches</h5>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
 
-    <!-- Footer Section -->
-    <footer class="site-footer site-bg-brown site-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-4 site-animate">
-                            <h2 class="site-heading-2">About Us</h2>
-                            <p>Reckon Stone World is dedicated to providing top-quality laterite stones for construction and decoration. Our stones are known for their durability and aesthetic appeal, making them the perfect choice for any project.</p>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3 site-animate">
-                            <div class="site-footer-widget mb-4">
-                                <h2 class="site-heading-2">Our Company</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="index.html#section-about" class="py-2 d-block">About Us</a></li>
-                                    <li><a href="index.html#section-products" class="py-2 d-block">Products</a></li>
-                                    <li><a href="index.html#section-gallery" class="py-2 d-block">Gallery</a></li>
-                                    <li><a href="index.html#section-contact" class="py-2 d-block">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-2 site-animate">
-                            <div class="site-footer-widget mb-4">
-                                <h2 class="site-heading-2">Products</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="py-2 d-block">Stones for Houses</a></li>
-                                    <li><a href="#" class="py-2 d-block">Wall Stones</a></li>
-                                    <li><a href="#" class="py-2 d-block">Decorative Stones</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row site-animate">
-                <div class="col-md-12 text-center">
-                    <div class="site-footer-widget mb-4">
-                        <h2 class="site-heading-2">Follow Us</h2>
-                        <ul class="site-footer-social list-unstyled">
-                            <li class="site-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="site-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="site-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    <p>&copy; <script>document.write(new Date().getFullYear());</script> Reckon Stone World. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+   <!-- Footer Section -->
+   <footer class="site-footer site-bg-brown site-section">
+       <div class="container">
+           <div class="row mb-5">
+               <div class="col-md-12">
+                   <div class="row">
+                       <div class="col-md-4 site-animate">
+                           <h2 class="site-heading-2">About Us</h2>
+                           <p>Reckon Stone World is dedicated to providing top-quality laterite stones for construction and decoration. Our stones are known for their durability and aesthetic appeal, making them the perfect choice for any project.</p>
+                       </div>
+                       <div class="col-md-1"></div>
+                       <div class="col-md-3 site-animate">
+                           <div class="site-footer-widget mb-4">
+                               <h2 class="site-heading-2">Our Company</h2>
+                               <ul class="list-unstyled">
+                                   <li><a href="index.html#section-about" class="py-2 d-block">About Us</a></li>
+                                   <li><a href="index.html#section-products" class="py-2 d-block">Products</a></li>
+                                   <li><a href="index.html#section-gallery" class="py-2 d-block">Gallery</a></li>
+                                   <li><a href="index.html#section-contact" class="py-2 d-block">Contact</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-md-2 site-animate">
+                           <div class="site-footer-widget mb-4">
+                               <h2 class="site-heading-2">Products</h2>
+                               <ul class="list-unstyled">
+                                   <li><a href="#" class="py-2 d-block">Stones for Houses</a></li>
+                                   <li><a href="#" class="py-2 d-block">Wall Stones</a></li>
+                                   <li><a href="#" class="py-2 d-block">Decorative Stones</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="row site-animate">
+               <div class="col-md-12 text-center">
+                   <div class="site-footer-widget mb-4">
+                       <h2 class="site-heading-2">Follow Us</h2>
+                       <ul class="site-footer-social list-unstyled">
+                           <li class="site-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                           <li class="site-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                           <li class="site-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="col-md-12 text-center">
+                   <p>&copy; <script>document.write(new Date().getFullYear());</script> Reckon Stone World. All rights reserved.</p>
+               </div>
+           </div>
+       </div>
+   </footer>
 
-    <!-- Loader Section -->
-    <div id="site-loader" class="show fullscreen">
-        <svg class="circular" width="48px" height="48px">
-            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
-            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle>
-        </svg>
-    </div>
+   <!-- Loader Section -->
+   <div id="site-loader" class="show fullscreen">
+       <svg class="circular" width="48px" height="48px">
+           <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+           <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle>
+       </svg>
+   </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/main.js"></script>
+   <!-- JavaScript Libraries -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.easing.1.3.js"></script>
+   <script src="js/jquery.waypoints.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <script src="js/jquery.magnific-popup.min.js"></script>
+   <script src="js/bootstrap-datepicker.js"></script>
+   <script src="js/jquery.timepicker.min.js"></script>
+   <script src="js/jquery.animateNumber.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   <script src="js/main.js"></script>
 
-  
- 
-
-    <!-- Custom Script for Navbar Scrolling -->
-    <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('.navbar').addClass('scrolled');
-                } else {
-                    $('.navbar').removeClass('scrolled');
-                }
-            });
-        });
-    </script>
+   <!-- Custom Script for Navbar Scrolling -->
+   <script>
+       $(document).ready(function () {
+           $(window).scroll(function () {
+               if ($(this).scrollTop() > 50) {
+                   $('.navbar').addClass('scrolled');
+               } else {
+                   $('.navbar').removeClass('scrolled');
+               }
+           });
+           AOS.init();
+       });
+   </script>
 </body>
 </html>

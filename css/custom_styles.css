@@ -263,6 +263,7 @@ margin-left: -20px;
     transition: background-color 0.3s, color 0.3s;
     display: inline-flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 .btn-download i {
     margin-right: 10px;
@@ -271,4 +272,7 @@ margin-left: -20px;
     background-color: #fff;
     color: #6b4226;
     border: 1px solid #6b4226;
+}
+.highlight1{
+    margin-right: 17px;
 }
