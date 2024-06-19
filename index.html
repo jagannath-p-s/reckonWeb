@@ -25,8 +25,295 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     
-  
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #f8f4f0;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar-dark {
+            background-color: #4a1a1a;
+        }
+        .navbar-light {
+            background-color: transparent;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: #333;
+        }
+        .site-footer {
+            background-color: #723c2b;
+            color: #fff;
+        }
+        .site-footer a {
+            color: #fff;
+        }
+        .navbar-brand img {
+            height: 50px;
+            display: none;
+        }
+        .navbar-brand span {
+            display: inline;
+            font-family: 'Merriweather', serif;
+        }
+        .navbar.scrolled .navbar-brand img {
+            display: inline;
+        }
+        .navbar.scrolled .navbar-brand span {
+            display: none;
+        }
+        .btn-outline-white {
+            border-color: #fff;
+            color: #fff;
+        }
+        .btn-outline-white:hover {
+            background-color: #fff;
+            color: #4a1a1a;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product-card .product-info {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .product-card .product-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #4a1a1a;
+            margin-bottom: 10px;
+        }
+        .burger {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            cursor: pointer;
+            transition: 300ms;
+            border-radius: 10px;
+        }
+        .burger input[type="checkbox"] {
+            appearance: none;
+            transition: 300ms;
+        }
+        .burger::before,
+        .burger::after {
+            content: "";
+            transition: 300ms;
+            transform-origin: center center;
+        }
+        .burger::before {
+            transform: translateY(8px);
+        }
+        .burger::after {
+            transform: translateY(-8px);
+        }
+        .burger .line,
+        .burger::before,
+        .burger::after {
+            width: 25px;
+            height: 2.1px;
+            display: block;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            position: absolute;
+        }
+        .burger .line:checked {
+            width: 0;
+            transition-delay: 100ms;
+        }
+        .burger:has(.line:checked)::before {
+            animation: animation1 400ms ease-out 0s 1 both;
+        }
+        .burger:has(.line:checked)::after {
+            animation: animation2 400ms ease-out 0s 1 both;
+        }
+        .burger:active {
+            scale: 0.95;
+        }
+        @keyframes animation1 {
+            0% {
+                transform: translateY(8px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(45deg);
+            }
+        }
+        @keyframes animation2 {
+            0% {
+                transform: translateY(-8px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(-45deg);
+            }
+        }
+        .burger.scrolled .line,
+        .burger.scrolled::before,
+        .burger.scrolled::after {
+            background-color: black;
+        }
+        @media (min-width: 992px) {
+            .burger-icon {
+                display: none;
+            }
+        }
+        @media (max-width: 991.98px) {
+            .burger-icon {
+                display: flex;
+            }
+        }
+        .scrolled {
+            background-color: #343a40 !important;
+        }
+        .short-text {
+            display: none;
+        }
+        .full-text {
+            display: inline;
+        }
+        @media (max-width: 767.98px) {
+            .short-text {
+                display: inline;
+            }
+            .full-text {
+                display: none;
+            }
+        }
+        .navbar.scrolled {
+            background-color: white !important;
+        }
+        .navbar.scrolled .nav-link {
+            color: black !important;
+        }
+        .navbar.scrolled .burger .line,
+        .navbar.scrolled .burger::before,
+        .navbar.scrolled .burger::after {
+            background-color: black !important;
+        }
+
+        /* Animations and styles for mobile */
+        @media (max-width: 767.98px) {
+            .product-card {
+                padding: 15px;
+            }
+            .product-card .product-title {
+                font-size: 1.5rem;
+            }
+            .product-card img {
+                height: auto;
+                transition: none;
+            }
+            .navbar-nav .nav-item .nav-link {
+                padding: 10px;
+            }
+            .site-heading-container h1 {
+                font-size: 2rem;
+            }
+            .site-heading-container h2 {
+                font-size: 1rem;
+            }
+            .btn-outline-white {
+                font-size: 0.875rem;
+                padding: 10px 20px;
+            }
+        }
+
+        .aos-animate {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .zoom-in.aos-animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .about-img {
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add custom padding and margin for the section on mobile view */
+@media (max-width: 767.98px) {
+    .about-text {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .about-img {
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+
+    }
+    .imginabout {
+        text-align: center;
+    }
+}
+
+    </style>
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
 
@@ -38,9 +325,11 @@
                 <span class="full-text">Reckon Stone World</span>
                 <span class="short-text">Reckon</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
+            <div class="burger-icon d-lg-none">
+                <label class="burger" for="burger">
+                    <input class="line" type="checkbox" id="burger" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation" />
+                </label>
+            </div>
             <div class="collapse navbar-collapse" id="site-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="#section-home" class="nav-link">Home</a></li>
@@ -55,7 +344,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section class="site-cover" id="section-home">
+    <section class="site-cover" id="section-home" data-aos="fade-in" data-aos-duration="1000">
         <div class="bg bg1 active"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
@@ -63,16 +352,16 @@
             <h1 class="site-heading site-animate">Welcome To Reckon Stone World</h1>
             <h2 class="h5 site-subheading site-animate">High-quality laterite stones for your construction and decoration needs.</h2>
             <p>
-                <a href="#section-contact" class="btn btn-outline-white btn-lg site-animate">Get in Touch</a>
+                <a href="#section-contact" class="btn btn-outline-white btn-lg site-animate" data-aos="fade-up" data-aos-duration="1000">Get in Touch</a>
             </p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="site-section" id="section-about">
+    <section class="site-section" id="section-about" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 site-animate mb-5">
+                <div class="col-md-5 site-animate mb-5 about-text">
                     <h4 class="site-sub-title">About Us</h4>
                     <h2 class="site-primary-title display-4">Welcome</h2>
                     <p>Reckon Stone World specializes in manufacturing premium quality laterite stones. Our stones are perfect for houses, walls, and various decorative purposes, bringing a natural and elegant look to any space.</p>
@@ -80,15 +369,16 @@
                     <p><a href="#section-contact" class="btn btn-secondary btn-lg">Learn More About Us</a></p>
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-6 site-animate imginabout" data-animate-effect="fadeInRight">
-                    <img src="images/bg4.jpeg" alt="Reckon Stone World" class="img-fluid scale-1-5" />
+                <div class="col-md-6 site-animate imginabout">
+                    <img src="images/bg4.jpeg" alt="Reckon Stone World" class="img-fluid scale-1-5 about-img" data-aos="zoom-in" data-aos-duration="1000"/>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Products Section -->
-    <section class="site-section bg-light" id="section-products">
+    <section class="site-section bg-light" id="section-products" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center mb-5 site-animate">
@@ -103,7 +393,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <!-- Product Item 1 -->
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="100">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
                                     <img src="images/prod1.jpg" alt="Product 1" class="img-fluid product-image">
@@ -115,7 +405,7 @@
                             </div>
                         </div>
                         <!-- Product Item 2 -->
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="200">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
                                     <img src="images/prod2.jpg" alt="Product 2" class="img-fluid product-image">
@@ -127,7 +417,7 @@
                             </div>
                         </div>
                         <!-- Product Item 3 -->
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="300">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
                                     <img src="images/prod3.jpg" alt="Product 3" class="img-fluid product-image">
@@ -140,7 +430,7 @@
                         </div>
                     </div>
                     <div class="text-center mt-4">
-                        <a href="catalogue.html" class="btn btn-primary btn-lg view-all-btn">View All <span class="oi oi-arrow-thick-right"></span></a>
+                        <a href="catalogue.html" class="btn btn-primary btn-lg view-all-btn" data-aos="fade-up" data-aos-duration="1000">View All <span class="oi oi-arrow-thick-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -148,7 +438,7 @@
     </section>
     
     <!-- Gallery Section -->
-    <section class="site-section" id="section-gallery">
+    <section class="site-section" id="section-gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="row site-custom-gutters">
                 <div class="col-md-12 text-center mb-5 site-animate">
@@ -160,36 +450,35 @@
                     </div>
                 </div>
                 <!-- Gallery Item 1 -->
-                <div class="col-md-4 site-animate">
-                    <!-- <a href="images/gallery1.jpeg" class="site-thumbnail image-popup"> -->
+                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
+                    <a href="images/gallery1.jpeg" class="site-thumbnail image-popup">
                         <img src="images/gallery1.jpeg" alt="Gallery Image 1" class="img-fluid">
                     </a>
                 </div>
                 <!-- Gallery Item 2 -->
-                <div class="col-md-4 site-animate">
+                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
                     <a href="images/gallery_2.jpg" class="site-thumbnail image-popup">
                         <img src="images/gallery_2.jpg" alt="Gallery Image 2" class="img-fluid">
                     </a>
                 </div>
                 <!-- Gallery Item 3 -->
-                <div class="col-md-4 site-animate">
+                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
                     <a href="images/gallery_3.jpg" class="site-thumbnail image-popup">
                         <img src="images/gallery_3.jpg" alt="Gallery Image 3" class="img-fluid">
                     </a>
                 </div>
-                <!-- Add more gallery images as needed -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="site-section qr-section">
+    <section class="site-section qr-section" data-aos="fade-up" data-aos-duration="1000">
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <h6 class="highlight1">SCAN QR CODE</h6>
                     <img src="images/frame.png" alt="QR Code">
-                  <a href="images/reckoncatalogue.pdf" download="reckoncatalogue.pdf" class="btn-download"><i class="bi bi-download"></i> Download Catalogue</a>
+                    <a href="images/reckoncatalogue.pdf" download="reckoncatalogue.pdf" class="btn-download"><i class="bi bi-download"></i> Download Catalogue</a>
                 </div>
                 <div class="col-md-6 text-left qr-text">
                     <h3 class="highlight">Laterite Stones Redefined, Spaces Reimagined</h3>
@@ -200,7 +489,7 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="site-footer site-bg-brown site-section" id="section-contact">
+    <footer class="site-footer site-bg-brown site-section" id="section-contact" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-12">
@@ -232,8 +521,8 @@
                                 <h2 class="site-heading-2">Contact</h2>
                                 <p class="text-white">
                                     Address: <br>
-                                  <a href="">121 Street, Melbourne Victoria </a> <br>
-                                   <a href="">3000 Australia </a> <br><br>
+                                    <a href="">121 Street, Melbourne Victoria </a> <br>
+                                    <a href="">3000 Australia </a> <br><br>
                                     Phone: <br>
                                     <a href="tel:+90 987 65 44">90 987 65 44</a> <br><br>
                                     Email: <br>
@@ -281,17 +570,28 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Custom Script for Navbar Scrolling -->
     <script>
         $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > $('#section-home').height()) {
+            let scrollTriggered = false;
+
+            function handleScroll() {
+                if ($(window).scrollTop() > $('#section-home').height() && !scrollTriggered) {
                     $('.navbar').addClass('scrolled');
+                    scrollTriggered = true;
+                    $(window).off('scroll', handleScroll);
                 } else {
                     $('.navbar').removeClass('scrolled');
                 }
+            }
+
+            $(window).on('scroll', handleScroll);
+
+            AOS.init({
+                duration: 1000,
             });
 
             // Scroll to top button functionality
@@ -341,5 +641,4 @@
         });
     </script>
 </body>
-
 </html>

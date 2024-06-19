@@ -71,6 +71,7 @@ h1, h2, h3, h4, h5,
 
 .site-navbar-light .navbar-toggler {
   border: none;
+  outline: none;
   color: rgba(255, 255, 255, 0.5) !important;
   cursor: pointer;
   padding-right: 0;
@@ -393,7 +394,7 @@ textarea.form-control {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: .5em;
-  color: #d4d4d4;
+  color: #a56969;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }

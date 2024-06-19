@@ -40,10 +40,10 @@
             background-color: transparent;
         }
         .navbar-light .navbar-nav .nav-link {
-            color: #4d3219;
+            color: #723c2b;
         }
         .site-footer {
-            background-color: #8c6239;
+            background-color: #4a1a1a;
             color: #fff;
         }
         .site-footer a {
@@ -92,7 +92,7 @@
             padding: 20px;
             margin-bottom: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
-            background-color: #fff;
+            background-color: #f5efef;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -103,13 +103,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            
-           
         }
         .product-card img {
-        transform: scale(4.5); 
-        transition: transform 0.3s;
-}
+            transform: scale(4.5); 
+            transition: transform 0.3s;
+        }
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -138,51 +136,252 @@
                 margin-bottom: 20px;
             }
         }
-        
-    /* Navbar CSS */
-    .site-navbar-light {
-        background: transparent !important;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 3;
-    }
 
-    @media screen and (max-width: 991px) {
-        .site-navbar-light {
-            background: rgba(76, 42, 25, 0.9) !important;
-            top: 0;
+        /* New Styles from Example Site */
+        .flex {
+            display: flex;
+        }
+        .font-serif {
+            font-family: 'Merriweather', serif;
+        }
+        .flex-none {
+            flex: none;
+        }
+        .relative {
             position: relative;
         }
-    }
-
-    .site-navbar-light .navbar-nav > .nav-item > .nav-link {
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: .2em;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    @media screen and (max-width: 960px) {
-        .site-navbar-light .navbar-nav > .nav-item > .nav-link {
-            padding-bottom: 10px;
-            padding-left: 0px;
-            padding-right: 0px;
+        .absolute {
+            position: absolute;
         }
-    }
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .w-full {
+            width: 100%;
+        }
+        .h-full {
+            height: 100%;
+        }
+        .object-cover {
+            object-fit: cover;
+        }
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        .flex-auto {
+            flex: 1 1 auto;
+        }
+        .p-6 {
+            padding: 1.5rem;
+        }
+        .text-slate-900 {
+            color: #1e293b;
+        }
+        .text-slate-500 {
+            color: #6b7280;
+        }
+        .border-slate-200 {
+            border-color: #e5e7eb;
+        }
+        .peer-checked\:bg-slate-100:checked ~ .peer-checked\:bg-slate-100 {
+            background-color: #f1f5f9;
+        }
+        .peer-checked\:text-slate-900:checked ~ .peer-checked\:text-slate-900 {
+            color: #1e293b;
+        }
+        .w-7 {
+            width: 1.75rem;
+        }
+        .h-7 {
+            height: 1.75rem;
+        }
+        .rounded-full {
+            border-radius: 9999px;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .font-medium {
+            font-weight: 500;
+        }
+        .tracking-wider {
+            letter-spacing: 0.05em;
+        }
+        .bg-slate-900 {
+            background-color: #1e293b;
+        }
+        .text-white {
+            color: #fff;
+        }
+        .border {
+            border-width: 1px;
+        }
+        .border-slate-200 {
+            border-color: #e5e7eb;
+        }
+        .w-12 {
+            width: 3rem;
+        }
+        .h-12 {
+            height: 3rem;
+        }
+        .text-slate-300 {
+            color: #d1d5db;
+        }
+        .aria-hidden {
+            visibility: hidden;
+        }
+        .aria-hidden:before {
+            content: '\00a0';
+        }
+        .fill-current {
+            fill: currentColor;
+        }
 
-    .site-navbar-light .navbar-toggler {
-        border: none;
-        color: rgba(255, 255, 255, 0.9) !important;
-        cursor: pointer;
-        padding-right: 0;
-        text-transform: uppercase;
-        font-size: 16px;
-        letter-spacing: .1em;
-    }
+        /* Burger Icon Styles */
+        .burger {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            cursor: pointer;
+            transition: 300ms;
+            border-radius: 10px;
+        }
+        .burger input[type="checkbox"] {
+            appearance: none;
+            transition: 300ms;
+        }
+
+        .burger::before,
+        .burger::after {
+            content: "";
+            transition: 300ms;
+            transform-origin: center center;
+        }
+
+        .burger::before {
+            transform: translateY(8px);
+        }
+        .burger::after {
+            transform: translateY(-8px);
+        }
+        .burger .line,
+        .burger::before,
+        .burger::after {
+            width: 25px;
+            height: 2.1px;
+            display: block;
+            background-color: black;
+            border-radius: 5px;
+            position: absolute;
+        }
+
+        .burger .line:checked {
+            width: 0;
+            transition-delay: 100ms;
+        }
+        .burger:has(.line:checked)::before {
+            animation: animation1 400ms ease-out 0s 1 both;
+        }
+        .burger:has(.line:checked)::after {
+            animation: animation2 400ms ease-out 0s 1 both;
+        }
+
+      
+
+        .burger:active {
+            scale: 0.95;
+        }
+
+        @keyframes animation1 {
+            0% {
+                transform: translateY(8px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(45deg);
+            }
+        }
+
+        @keyframes animation2 {
+            0% {
+                transform: translateY(-8px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(-45deg);
+            }
+        }
+        
+        /* Navbar CSS */
+        .site-navbar-light {
+            background: transparent !important;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        @media screen and (max-width: 991px) {
+            .site-navbar-light {
+                background: rgba(165, 112, 85, 0) !important;
+                top: 0;
+                position: relative;
+            }
+        }
+
+        .site-navbar-light .navbar-nav > .nav-item > .nav-link {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media screen and (max-width: 960px) {
+            .site-navbar-light .navbar-nav > .nav-item > .nav-link {
+                padding-bottom: 10px;
+                padding-left: 0px;
+                padding-right: 0px;
+                color: #1e293b;
+            }
+        }
+
+        .site-navbar-light .navbar-toggler {
+            border: none;
+            color: rgba(0, 0, 0, 0.9) !important;
+            cursor: pointer;
+            padding-right: 0;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: .1em;
+        }
+
+        /* Media Queries for Burger Icon */
+        @media (min-width: 992px) {
+            .burger-icon {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .burger-icon {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -192,11 +391,13 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Reckon Stone World Logo">
-                <span>Reckon</span>
+                <span>Reckon </span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
+            <div class="burger-icon d-lg-none">
+                <label class="burger" for="burger">
+                    <input class="line" type="checkbox" id="burger" data-toggle="collapse" data-target="#site-nav" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation" />
+                </label>
+            </div>
             <div class="collapse navbar-collapse" id="site-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="index.html#section-home" class="nav-link">Home</a></li>
@@ -208,6 +409,7 @@
                 </ul>
             </div>
         </div>
+   
     </nav>
 
     <!-- Catalogue Section -->
@@ -225,61 +427,62 @@
                </div>
            </div>
            <div class="row">
-               <!-- Product Item 1 -->
-               <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                   <div class="product-card">
-                       <img src="images/12inx7inx20mm.png" alt="Product 1" class="img-fluid">
-                       <div class="product-info">
-                           <h5 class="product-title">12x7x20 mm</h5>
-                       </div>
-                   </div>
-               </div>
-               <!-- Product Item 2 -->
-               <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                   <div class="product-card">
-                       <img src="images/12x6x6.png"  alt="Product 2" class="img-fluid">
-                       <div class="product-info">
-                           <h5 class="product-title">12x6x3 inches</h5>
-                       </div>
-                   </div>
-               </div>
-               <!-- Product Item 3 -->
-               <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                   <div class="product-card">
-                       <img src="images/12x6x6.png" alt="Product 3" class="img-fluid">
-                       <div class="product-info">
-                           <h5 class="product-title">12x6x6 inches</h5>
-                       </div>
-                   </div>
-               </div>
-               <!-- Product Item 4 -->
-               <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-                   <div class="product-card">
-                       <img src="images/6inx6in20mm.png" alt="Product 4" class="img-fluid">
-                       <div class="product-info">
-                           <h5 class="product-title">6x6x20 mm</h5>
-                       </div>
-                   </div>
-               </div>
-               <!-- Product Item 5 -->
-               <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-                   <div class="product-card">
-                       <img src="images/12x7x8.png" alt="Product 5" class="img-fluid">
-                       <div class="product-info">
-                           <h5 class="product-title">12x7x8 inches</h5>
-                       </div>
-                   </div>
-               </div>
-               <!-- Product Item 6 -->
-               <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                   <div class="product-card">
-                       <img src="images/9x4x3.png" alt="Product 6" class="img-fluid">
-                       <div class="product-info">
-                           <h5 class="product-title">9x4x3 inches</h5>
-                       </div>
-                   </div>
-               </div>
-           </div>
+            <!-- Product Item 1 -->
+            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card mb-4">
+                    <img src="images/12inx7inx20mm.png" alt="Product 1" class="img-fluid">
+                    <div class="product-info">
+                        <h5 class="product-title">12x7x20 mm</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Item 2 -->
+            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card mb-4">
+                    <img src="images/12x6x6.png" alt="Product 2" class="img-fluid">
+                    <div class="product-info">
+                        <h5 class="product-title">12x6x3 inches</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Item 3 -->
+            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card mb-4">
+                    <img src="images/12x6x6.png" alt="Product 3" class="img-fluid">
+                    <div class="product-info">
+                        <h5 class="product-title">12x6x6 inches</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Item 4 -->
+            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-card mb-4">
+                    <img src="images/6inx6in20mm.png" alt="Product 4" class="img-fluid">
+                    <div class="product-info">
+                        <h5 class="product-title">6x6x20 mm</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Item 5 -->
+            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="500">
+                <div class="product-card mb-4">
+                    <img src="images/12x7x8.png" alt="Product 5" class="img-fluid">
+                    <div class="product-info">
+                        <h5 class="product-title">12x7x8 inches</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Item 6 -->
+            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="600">
+                <div class="product-card mb-4">
+                    <img src="images/9x4x3.png" alt="Product 6" class="img-fluid">
+                    <div class="product-info">
+                        <h5 class="product-title">9x4x3 inches</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
        </div>
    </section>
 
@@ -369,6 +572,22 @@
                }
            });
            AOS.init();
+
+           $('#burger').on('change', function () {
+               if ($(this).is(':checked')) {
+                   $('#site-nav').collapse('show');
+               } else {
+                   $('#site-nav').collapse('hide');
+               }
+           });
+
+           $('#site-nav').on('shown.bs.collapse', function () {
+               $('#burger').prop('checked', true);
+           });
+
+           $('#site-nav').on('hidden.bs.collapse', function () {
+               $('#burger').prop('checked', false);
+           });
        });
    </script>
 </body>
