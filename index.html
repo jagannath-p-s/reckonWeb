@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Reckon Stone World - Specializing in laterite stone manufacturing for houses, walls, and decorations. High-quality stones to enhance the beauty of your spaces.">
     <meta name="keywords" content="Reckon Stone World, laterite stones, stone manufacturing, stones for houses, wall stones, decorative stones">
-    
+
     <!-- Title -->
     <title>Reckon Stone World - Laterite Stone Manufacturing</title>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,700" rel="stylesheet">
-    
+
     <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -27,7 +29,7 @@
     <link rel="stylesheet" href="css/custom_styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    
+
     <!-- Custom Styles -->
     <style>
         body {
@@ -35,44 +37,56 @@
             color: #333;
             font-family: 'Open Sans', sans-serif;
         }
+
         .navbar-dark {
             background-color: #4a1a1a;
         }
+
         .navbar-light {
             background-color: transparent;
         }
+
         .navbar-light .navbar-nav .nav-link {
             color: #333;
         }
+
         .site-footer {
             background-color: #723c2b;
             color: #fff;
         }
+
         .site-footer a {
             color: #fff;
         }
+
         .navbar-brand img {
             height: 50px;
             display: none;
         }
+
         .navbar-brand span {
             display: inline;
             font-family: 'Merriweather', serif;
         }
+
         .navbar.scrolled .navbar-brand img {
             display: inline;
         }
+
         .navbar.scrolled .navbar-brand span {
             display: none;
         }
+
         .btn-outline-white {
-            border-color: #fff;
+            border-color: #ffffff;
             color: #fff;
         }
+
         .btn-outline-white:hover {
             background-color: #fff;
             color: #4a1a1a;
         }
+
         .product-card {
             border: 1px solid #ddd;
             padding: 20px;
@@ -90,26 +104,31 @@
             align-items: center;
             text-align: center;
         }
+
         .product-card img {
             max-width: 100%;
             height: auto;
             margin-bottom: 20px;
             transition: transform 0.3s;
         }
+
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .product-card .product-info {
             text-align: center;
             flex-grow: 1;
         }
+
         .product-card .product-title {
             font-size: 1.75rem;
             font-weight: bold;
             color: #4a1a1a;
             margin-bottom: 10px;
         }
+
         .burger {
             width: 40px;
             height: 40px;
@@ -122,22 +141,27 @@
             transition: 300ms;
             border-radius: 10px;
         }
+
         .burger input[type="checkbox"] {
             appearance: none;
             transition: 300ms;
         }
+
         .burger::before,
         .burger::after {
             content: "";
             transition: 300ms;
             transform-origin: center center;
         }
+
         .burger::before {
             transform: translateY(8px);
         }
+
         .burger::after {
             transform: translateY(-8px);
         }
+
         .burger .line,
         .burger::before,
         .burger::after {
@@ -148,79 +172,100 @@
             border-radius: 5px;
             position: absolute;
         }
+
         .burger .line:checked {
             width: 0;
             transition-delay: 100ms;
         }
+
         .burger:has(.line:checked)::before {
             animation: animation1 400ms ease-out 0s 1 both;
         }
+
         .burger:has(.line:checked)::after {
             animation: animation2 400ms ease-out 0s 1 both;
         }
+
         .burger:active {
             scale: 0.95;
         }
+
         @keyframes animation1 {
             0% {
                 transform: translateY(8px) rotate(0deg);
             }
+
             50% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             100% {
                 transform: translateY(0px) rotate(45deg);
             }
         }
+
         @keyframes animation2 {
             0% {
                 transform: translateY(-8px) rotate(0deg);
             }
+
             50% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             100% {
                 transform: translateY(0px) rotate(-45deg);
             }
         }
+
         .burger.scrolled .line,
         .burger.scrolled::before,
         .burger.scrolled::after {
             background-color: black;
         }
+
         @media (min-width: 992px) {
             .burger-icon {
                 display: none;
             }
         }
+
         @media (max-width: 991.98px) {
             .burger-icon {
                 display: flex;
             }
         }
+
         .scrolled {
             background-color: #343a40 !important;
         }
+
         .short-text {
             display: none;
         }
+
         .full-text {
             display: inline;
         }
+
         @media (max-width: 767.98px) {
             .short-text {
                 display: inline;
             }
+
             .full-text {
                 display: none;
             }
         }
+
         .navbar.scrolled {
             background-color: white !important;
         }
+
         .navbar.scrolled .nav-link {
             color: black !important;
         }
+
         .navbar.scrolled .burger .line,
         .navbar.scrolled .burger::before,
         .navbar.scrolled .burger::after {
@@ -232,22 +277,28 @@
             .product-card {
                 padding: 15px;
             }
+
             .product-card .product-title {
                 font-size: 1.5rem;
             }
+
             .product-card img {
                 height: auto;
                 transition: none;
             }
+
             .navbar-nav .nav-item .nav-link {
                 padding: 10px;
             }
+
             .site-heading-container h1 {
                 font-size: 2rem;
             }
+
             .site-heading-container h2 {
                 font-size: 1rem;
             }
+
             .btn-outline-white {
                 font-size: 0.875rem;
                 padding: 10px 20px;
@@ -290,31 +341,98 @@
             opacity: 1;
             transform: scale(1);
         }
+
         .about-img {
-    width: 80%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
+            width: 80%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
 
-/* Add custom padding and margin for the section on mobile view */
-@media (max-width: 767.98px) {
-    .about-text {
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-    .about-img {
-        width: 100%;
-        height: auto;
-        margin-top: 40px;
+        .fab {
+            margin-top: 13px;
+        }
 
-    }
-    .imginabout {
-        text-align: center;
-    }
-}
+        /* Add custom padding and margin for the section on mobile view */
+        @media (max-width: 767.98px) {
+            .about-text {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
 
+            .about-img {
+                width: 100%;
+                height: auto;
+                margin-top: 40px;
+            }
+
+            .imginabout {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            body {
+                overflow-x: hidden;
+            }
+        }
+
+        /* Custom styles for carousel */
+        .owl-carousel .owl-nav {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+
+        .owl-carousel .owl-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .owl-carousel .owl-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .owl-carousel .owl-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .owl-carousel .owl-dots .owl-dot {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            height: 10px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease-in-out;
+            width: 10px;
+        }
+
+        .owl-carousel .owl-dots .owl-dot.active {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .owl-carousel .owl-item {
+            display: none;
+        }
+
+        .owl-carousel .owl-item.active {
+            display: block;
+        }
+
+        .owl-carousel .owl-stage-outer {
+            background-color: white;
+        }
     </style>
 </head>
+
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
 
     <!-- Navbar Section -->
@@ -336,8 +454,8 @@
                     <li class="nav-item"><a href="#section-about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#section-products" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="#section-gallery" class="nav-link">Gallery</a></li>
-                    <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
                     <li class="nav-item"><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                    <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -370,12 +488,11 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-6 site-animate imginabout">
-                    <img src="images/bg4.jpeg" alt="Reckon Stone World" class="img-fluid scale-1-5 about-img" data-aos="zoom-in" data-aos-duration="1000"/>
+                    <img src="images/bg4.jpeg" alt="Reckon Stone World" class="img-fluid scale-1-5 about-img" data-aos="zoom-in" data-aos-duration="1000" />
                 </div>
             </div>
         </div>
     </section>
-    
 
     <!-- Products Section -->
     <section class="site-section bg-light" id="section-products" data-aos="fade-up" data-aos-duration="1000">
@@ -436,36 +553,67 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Gallery Section -->
     <section class="site-section" id="section-gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <div class="row site-custom-gutters">
-                <div class="col-md-12 text-center mb-5 site-animate">
-                    <h2 class="display-4">Gallery</h2>
-                    <div class="row justify-content-center">
-                        <div class="col-md-7">
-                            <p class="lead">Take a look at some of our completed projects and the quality of our laterite stones.</p>
-                        </div>
+            <div class="col-md-12 text-center mb-5 site-animate">
+                <h2 class="display-4">Gallery</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+                        <p class="lead">Take a look at some of our completed projects and the quality of our laterite stones.</p>
                     </div>
                 </div>
+            </div>
+            <div class="row site-custom-gutters">
                 <!-- Gallery Item 1 -->
                 <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
-                    <a href="images/gallery1.jpeg" class="site-thumbnail image-popup">
-                        <img src="images/gallery1.jpeg" alt="Gallery Image 1" class="img-fluid">
-                    </a>
+                    <img src="images/gallery1.jpeg" alt="Gallery Image 1" class="img-fluid">
                 </div>
                 <!-- Gallery Item 2 -->
                 <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
-                    <a href="images/gallery_2.jpg" class="site-thumbnail image-popup">
-                        <img src="images/gallery_2.jpg" alt="Gallery Image 2" class="img-fluid">
-                    </a>
+                    <img src="images/gallery2.jpg" alt="Gallery Image 2" class="img-fluid">
                 </div>
                 <!-- Gallery Item 3 -->
                 <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
-                    <a href="images/gallery_3.jpg" class="site-thumbnail image-popup">
-                        <img src="images/gallery_3.jpg" alt="Gallery Image 3" class="img-fluid">
-                    </a>
+                    <img src="images/gallery3.jpg" alt="Gallery Image 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="site-section" id="section-videos" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="col-md-12 text-center mb-5 site-animate">
+                <h2 class="display-4">Our Reels</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+                        <p class="lead">Watch some of our work videos and get inspired by the quality and craftsmanship of our laterite stones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row site-custom-gutters">
+                <!-- Video Item 1 -->
+                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
+                    <video controls class="img-fluid">
+                        <source src="images/Video-17.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Video Item 2 -->
+                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
+                    <video controls class="img-fluid">
+                        <source src="images/Video-18.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Video Item 3 -->
+                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
+                    <video controls class="img-fluid">
+                        <source src="images/Video-230.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -521,12 +669,10 @@
                                 <h2 class="site-heading-2">Contact</h2>
                                 <p class="text-white">
                                     Address: <br>
-                                    <a href="">121 Street, Melbourne Victoria </a> <br>
-                                    <a href="">3000 Australia </a> <br><br>
+                                    <a href="">Aloor ,Thrissur </a> <br>
+                                    <a href="">Kerala </a> <br><br>
                                     Phone: <br>
-                                    <a href="tel:+90 987 65 44">90 987 65 44</a> <br><br>
-                                    Email: <br>
-                                    <a href="mailto:info@reckonstoneworld.com">info@reckonstoneworld.com</a>
+                                    <a href="tel:+90 987 65 44">+91 96565 47655</a> <br><br>
                                 </p>
                             </div>
                         </div>
@@ -538,14 +684,29 @@
                     <div class="site-footer-widget mb-4">
                         <h2 class="site-heading-2">Follow Us</h2>
                         <ul class="site-footer-social list-unstyled">
-                            <li class="site-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="site-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="site-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                            <li class="site-animate">
+                                <a href="https://wa.me/+9656547655" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="site-animate">
+                                <a href="https://www.facebook.com/Reckonstoneworld" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-facebook-f fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="site-animate">
+                                <a href="https://www.instagram.com/reckon_stone_world/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-12 text-center">
-                    <p>&copy; <script>document.write(new Date().getFullYear());</script> Reckon Stone World. All rights reserved.</p>
+                    <p>&copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> Reckon Stone World. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -573,9 +734,53 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Custom Script for Navbar Scrolling -->
+    <!-- Custom Script for Navbar Scrolling and Animations Triggering Once -->
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
+            let animationsTriggered = false;
+            let $animation_elements = $('.product-card');
+            let $window = $(window);
+
+            function check_if_in_view() {
+                var window_height = $window.height();
+                var window_top_position = $window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                if (!animationsTriggered) {
+                    $.each($animation_elements, function() {
+                        var $element = $(this);
+                        var element_height = $element.outerHeight();
+                        var element_top_position = $element.offset().top;
+                        var element_bottom_position = (element_top_position + element_height);
+
+                        // Check to see if this current container is within viewport
+                        if ((element_bottom_position >= window_top_position) &&
+                            (element_top_position <= window_bottom_position)) {
+                            if (!$element.hasClass('in-view')) {
+                                $element.addClass('in-view');
+                                $element.addClass('animated-once'); // Add class indicating animation triggered
+                            }
+                        }
+                    });
+
+                    // Set the flag to true after triggering the animations
+                    animationsTriggered = true;
+                }
+            }
+
+            $window.on('scroll resize', function() {
+                check_if_in_view();
+
+                // Remove the scroll event listener after triggering the animations
+                if (animationsTriggered) {
+                    $window.off('scroll resize', check_if_in_view);
+                }
+            });
+
+            // Initial check
+            check_if_in_view();
+
+            // Custom Script for Navbar Scrolling
             let scrollTriggered = false;
 
             function handleScroll() {
@@ -595,8 +800,10 @@
             });
 
             // Scroll to top button functionality
-            $('.scroll-to-top').click(function () {
-                $('html, body').animate({scrollTop: 0}, 800);
+            $('.scroll-to-top').click(function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 800);
                 return false;
             });
 
@@ -604,41 +811,49 @@
             if (window.innerWidth < 768) {
                 let currentIndex = 0;
                 const images = $('.site-cover .bg');
-                setInterval(function () {
+                setInterval(function() {
                     images.removeClass('active');
                     currentIndex = (currentIndex + 1) % images.length;
                     images.eq(currentIndex).addClass('active');
                 }, 3000);
             }
 
-            // Add visibility class to product cards on scroll
-            var $animation_elements = $('.product-card');
-            var $window = $(window);
+            // Initialize Bootstrap carousel for Gallery and Videos sections in mobile view
+            if (window.innerWidth < 768) {
+                const carouselHTML = `
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/gallery1.jpeg" class="d-block w-100" alt="Gallery Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/gallery2.jpg" class="d-block w-100" alt="Gallery Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/gallery3.jpg" class="d-block w-100" alt="Gallery Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                `;
 
-            function check_if_in_view() {
-                var window_height = $window.height();
-                var window_top_position = $window.scrollTop();
-                var window_bottom_position = (window_top_position + window_height);
-
-                $.each($animation_elements, function() {
-                    var $element = $(this);
-                    var element_height = $element.outerHeight();
-                    var element_top_position = $element.offset().top;
-                    var element_bottom_position = (element_top_position + element_height);
-
-                    // Check to see if this current container is within viewport
-                    if ((element_bottom_position >= window_top_position) &&
-                        (element_top_position <= window_bottom_position)) {
-                        $element.addClass('in-view');
-                    } else {
-                        $element.removeClass('in-view');
-                    }
-                });
+                $('.site-custom-gutters').html(carouselHTML);
             }
-
-            $window.on('scroll resize', check_if_in_view);
-            $window.trigger('scroll');
         });
     </script>
+
 </body>
+
 </html>
