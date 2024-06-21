@@ -5,14 +5,14 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Reckon Stone World - Specializing in laterite stone manufacturing for houses, walls, and decorations. High-quality stones to enhance the beauty of your spaces.">
+    <meta name="description" content="Reckon Stone World - Laterite Stone Manufacturing">
     <meta name="keywords" content="Reckon Stone World, laterite stones, stone manufacturing, stones for houses, wall stones, decorative stones">
 
     <!-- Title -->
     <title>Reckon Stone World - Laterite Stone Manufacturing</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
 
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -29,17 +29,19 @@
     <link rel="stylesheet" href="css/custom_styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
 
     <!-- Custom Styles -->
     <style>
         body {
             background-color: #f8f4f0;
             color: #333;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Merriweather', serif;
         }
 
         .navbar-dark {
-            background-color: #4a1a1a;
+            background-color: #6b4226;
         }
 
         .navbar-light {
@@ -51,7 +53,7 @@
         }
 
         .site-footer {
-            background-color: #723c2b;
+            background-color: #6b4226;
             color: #fff;
         }
 
@@ -65,7 +67,6 @@
         }
 
         .navbar-brand span {
-            display: inline;
             font-family: 'Merriweather', serif;
         }
 
@@ -84,7 +85,7 @@
 
         .btn-outline-white:hover {
             background-color: #fff;
-            color: #4a1a1a;
+            color: #6b4226;
         }
 
         .product-card {
@@ -117,6 +118,32 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
+        .sub-text-section {
+            font-family: 'Merriweather', serif;
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.75;
+            color: #333;
+            text-align: center;
+            margin: 1rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            color: #6b4226;
+        }
+
+        @media (max-width: 767.98px) {
+            .sub-text-section {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin: 0.75rem 0;
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+        }
+
         .product-card .product-info {
             text-align: center;
             flex-grow: 1;
@@ -125,7 +152,7 @@
         .product-card .product-title {
             font-size: 1.75rem;
             font-weight: bold;
-            color: #4a1a1a;
+            color: #6b4226;
             margin-bottom: 10px;
         }
 
@@ -168,7 +195,8 @@
             width: 25px;
             height: 2.1px;
             display: block;
-            background-color: rgb(255, 255, 255);
+            background-color: white;
+            transition: background-color 0.3s ease;
             border-radius: 5px;
             position: absolute;
         }
@@ -268,7 +296,7 @@
 
         .navbar.scrolled .burger .line,
         .navbar.scrolled .burger::before,
-        .navbar.scrolled .burger::after {
+        .navbar.scrolled::after {
             background-color: black !important;
         }
 
@@ -376,59 +404,85 @@
             }
         }
 
-        /* Custom styles for carousel */
-        .owl-carousel .owl-nav {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 50%;
+        /* Custom styles for Swiper carousel */
+        @media (min-width: 768px) {
+            .gallery-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .gallery-container .swiper-slide {
+                width: 33.33%;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev,
+            .swiper-pagination {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .gallery-container,
+            .videos-container {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .gallery-container .swiper-slide,
+            .videos-container .swiper-slide {
+                width: 100%;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: #fff;
+                background: rgba(0, 0, 0, 0.5);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+                font-size: 20px;
+            }
+
+            .swiper-pagination-bullet {
+                background: #723c2b;
+                opacity: 0.7;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: #4a1a1a;
+                opacity: 1;
+            }
+        }
+
+        /* Plyr custom styles */
+        .plyr {
             width: 100%;
-            transform: translateY(-50%);
+            height: auto;
+            aspect-ratio: 9/16;
         }
 
-        .owl-carousel .owl-nav button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            padding: 10px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .owl-carousel .owl-nav button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .owl-carousel .owl-dots {
+        .swiper-slide {
             display: flex;
+            align-items: center;
             justify-content: center;
-            margin-top: 15px;
+            padding: 10px;
         }
 
-        .owl-carousel .owl-dots .owl-dot {
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            height: 10px;
-            margin: 0 5px;
-            transition: background-color 0.3s ease-in-out;
-            width: 10px;
+        .swiper-slide video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9/16;
         }
 
-        .owl-carousel .owl-dots .owl-dot.active {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .owl-carousel .owl-item {
-            display: none;
-        }
-
-        .owl-carousel .owl-item.active {
-            display: block;
-        }
-
-        .owl-carousel .owl-stage-outer {
-            background-color: white;
+        .video-section .plyr {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9/16;
         }
     </style>
 </head>
@@ -503,7 +557,7 @@
                     <h2 class="display-4">Premium Laterite Stones</h2>
                     <div class="row justify-content-center">
                         <div class="col-md-7">
-                            <p class="lead">Explore our wide range of high-quality laterite stones for various applications, including houses, walls, and decorative purposes.</p>
+                            <p class="lead sub-text-section">Explore our wide range of high-quality laterite stones for various applications, including houses, walls, and decorative purposes.</p>
                         </div>
                     </div>
                 </div>
@@ -561,60 +615,67 @@
                 <h2 class="display-4">Gallery</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-7">
-                        <p class="lead">Take a look at some of our completed projects and the quality of our laterite stones.</p>
+                        <p class=" lead sub-text-section">Take a look at some of our completed projects and the quality of our laterite stones.</p>
                     </div>
                 </div>
             </div>
-            <div class="row site-custom-gutters">
-                <!-- Gallery Item 1 -->
-                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/gallery1.jpeg" alt="Gallery Image 1" class="img-fluid">
+            <div class="swiper-container gallery-container">
+                <div class="swiper-wrapper">
+                    <!-- Gallery Item 1 -->
+                    <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/gallery1.jpeg" alt="Gallery Image 1" class="img-fluid">
+                    </div>
+                    <!-- Gallery Item 2 -->
+                    <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/gallery2.jpg" alt="Gallery Image 2" class="img-fluid">
+                    </div>
+                    <!-- Gallery Item 3 -->
+                    <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/gallery3.jpg" alt="Gallery Image 3" class="img-fluid">
+                    </div>
                 </div>
-                <!-- Gallery Item 2 -->
-                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/gallery2.jpg" alt="Gallery Image 2" class="img-fluid">
-                </div>
-                <!-- Gallery Item 3 -->
-                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/gallery3.jpg" alt="Gallery Image 3" class="img-fluid">
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
 
     <!-- Videos Section -->
-    <section class="site-section" id="section-videos" data-aos="fade-up" data-aos-duration="1000">
+    <section class="site-section video-section" id="section-videos" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <div class="col-md-12 text-center mb-5 site-animate">
                 <h2 class="display-4">Our Reels</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-7">
-                        <p class="lead">Watch some of our work videos and get inspired by the quality and craftsmanship of our laterite stones.</p>
+                        <p class="lead sub-text-section">Watch some of our work videos and get inspired by the quality and craftsmanship of our laterite stones.</p>
                     </div>
                 </div>
             </div>
-            <div class="row site-custom-gutters">
-                <!-- Video Item 1 -->
-                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
-                    <video controls class="img-fluid">
-                        <source src="images/Video-17.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+            <div class="swiper-container videos-container">
+                <div class="swiper-wrapper">
+                    <!-- Video Item 1 -->
+                    <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
+                        <video class="plyr" playsinline controls>
+                            <source src="images/Video-17.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Video Item 2 -->
+                    <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
+                        <video class="plyr" playsinline controls>
+                            <source src="images/Video-18.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Video Item 3 -->
+                    <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
+                        <video class="plyr" playsinline controls>
+                            <source src="images/Video-230.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-                <!-- Video Item 2 -->
-                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
-                    <video controls class="img-fluid">
-                        <source src="images/Video-18.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <!-- Video Item 3 -->
-                <div class="col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
-                    <video controls class="img-fluid">
-                        <source src="images/Video-230.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -639,7 +700,7 @@
     <!-- Footer Section -->
     <footer class="site-footer site-bg-brown site-section" id="section-contact" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <div class="row mb-5">
+            <div class="row mb=5">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-1"></div>
@@ -672,7 +733,7 @@
                                     <a href="">Aloor ,Thrissur </a> <br>
                                     <a href="">Kerala </a> <br><br>
                                     Phone: <br>
-                                    <a href="tel:+90 987 65 44">+91 96565 47655</a> <br><br>
+                                    <a href="tel:+91 9656547655">+91 9656547655</a> <br><br>
                                 </p>
                             </div>
                         </div>
@@ -732,6 +793,8 @@
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Custom Script for Navbar Scrolling and Animations Triggering Once -->
@@ -784,12 +847,12 @@
             let scrollTriggered = false;
 
             function handleScroll() {
-                if ($(window).scrollTop() > $('#section-home').height() && !scrollTriggered) {
+                if ($(window).scrollTop() > $('#section-home').height()) {
                     $('.navbar').addClass('scrolled');
-                    scrollTriggered = true;
-                    $(window).off('scroll', handleScroll);
+                    $('.burger .line, .burger::before, .burger::after').css('background-color', 'black');
                 } else {
                     $('.navbar').removeClass('scrolled');
+                    $('.burger .line, .burger::before, .burger::after').css('background-color', 'white');
                 }
             }
 
@@ -818,39 +881,146 @@
                 }, 3000);
             }
 
-            // Initialize Bootstrap carousel for Gallery and Videos sections in mobile view
-            if (window.innerWidth < 768) {
-                const carouselHTML = `
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/gallery1.jpeg" class="d-block w-100" alt="Gallery Image 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/gallery2.jpg" class="d-block w-100" alt="Gallery Image 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/gallery3.jpg" class="d-block w-100" alt="Gallery Image 3">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                `;
+            function initSwipers() {
+                if (window.innerWidth < 768) {
+                    new Swiper('.gallery-container', {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        loop: true,
+                        lazy: {
+                            loadPrevNext: true,
+                        },
+                        preloadImages: false,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                            type: 'bullets',
+                        },
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        on: {
+                            lazyImageReady: function() {
+                                $('.swiper-slide').css('opacity', 1);
+                            },
+                        },
+                    });
 
-                $('.site-custom-gutters').html(carouselHTML);
+                    new Swiper('.videos-container', {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        loop: true,
+                        lazy: {
+                            loadPrevNext: true,
+                        },
+                        preloadImages: false,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                            type: 'bullets',
+                        },
+                        autoplay: false,
+                        on: {
+                            lazyImageReady: function() {
+                                $('.swiper-slide').css('opacity', 1);
+                            },
+                        },
+                    });
+                }
             }
+
+            initSwipers();
+
+            $(window).on('resize', function() {
+                initSwipers();
+            });
+
+            // Fullscreen mode for images/videos
+            $('.swiper-slide img, .swiper-slide video').on('click', function() {
+                $(this).toggleClass('fullscreen');
+            });
+
+            // Pinch-to-zoom functionality
+            $('.swiper-slide img').each(function() {
+                $(this).panzoom({
+                    $zoomIn: $(".zoom-in"),
+                    $zoomOut: $(".zoom-out"),
+                    $reset: $(".reset"),
+                    startTransform: 'scale(1)',
+                    increment: 0.1,
+                    minScale: 1,
+                    contain: 'invert',
+                });
+            });
+
+            // Loading indicators
+            $('.swiper-slide img, .swiper-slide video').on('load', function() {
+                $(this).closest('.swiper-slide').addClass('loaded');
+            });
+
+            // Initialize Plyr
+            const players = Plyr.setup('.plyr', {
+                controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+                ratio: '9:16',
+                hideControls: false,
+                autoplay: false,
+            });
+
+            // Pause all videos when Swiper slides change
+            var videosSwiper = new Swiper('.videos-container', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                loop: true,
+                lazy: {
+                    loadPrevNext: true,
+                },
+                preloadImages: false,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    type: 'bullets',
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                on: {
+                    slideChange: function() {
+                        players.forEach(function(player) {
+                            player.pause();
+                        });
+                    },
+                    lazyImageReady: function() {
+                        $('.swiper-slide').css('opacity', 1);
+                    },
+                },
+            });
+
+            // Stop carousel autoplay when video is played
+            players.forEach(function(player) {
+                player.on('play', function() {
+                    videosSwiper.autoplay.stop();
+                });
+                player.on('pause', function() {
+                    videosSwiper.autoplay.start();
+                });
+                player.on('ended', function() {
+                    videosSwiper.autoplay.start();
+                });
+            });
         });
     </script>
 
