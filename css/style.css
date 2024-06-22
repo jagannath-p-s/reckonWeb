@@ -44,10 +44,13 @@ h1, h2, h3, h4, h5,
 
 @media screen and (max-width: 991px) {
   .site-navbar-light {
-    background: #000 !important;
+    background: #f0e8d8 !important;
     top: 0;
     position: relative;
   }
+  .navbar-dark .navbar-nav .nav-link {
+    color: #000000; /* White text */
+}
 }
 
 .site-navbar-light .navbar-nav > .nav-item > .nav-link {

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Reckon Stone World - Catalogue of premium laterite stones for various applications including houses, walls, and decorations.">
     <meta name="keywords" content="Reckon Stone World, laterite stones, stone catalogue, stone products, construction stones, decorative stones">
-    
+
     <!-- Title -->
     <title>Reckon Stone World - Catalogue</title>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,700" rel="stylesheet">
-    
+
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -27,7 +28,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    
+
     <!-- Custom Styles -->
     <style>
         body {
@@ -35,60 +36,76 @@
             color: #4d3219;
             font-family: 'Open Sans', sans-serif;
         }
+
         .navbar-dark {
             background-color: #8c6239;
         }
+
         .navbar-light {
             background-color: transparent;
         }
+
         .navbar-light .navbar-nav .nav-link {
             color: #723c2b;
         }
+
         .site-footer {
             background-color: #723c2b;
             color: #fff;
         }
+
         .site-footer a {
             color: #fff;
         }
+
         .navbar-brand img {
             height: 50px;
             display: none;
         }
+
         .navbar-brand span {
             display: inline;
             font-family: 'Merriweather', serif;
         }
+
         .navbar.scrolled .navbar-brand img {
             display: inline;
         }
+
         .navbar.scrolled .navbar-brand span {
             display: none;
         }
+
         @media (max-width: 768px) {
             .navbar-light {
                 background-color: rgba(76, 42, 25, 0.9);
             }
+
             .navbar-light .navbar-nav .nav-link {
                 color: #fff;
             }
         }
+
         @media (min-width: 768px) {
             .navbar-light {
                 background-color: transparent;
             }
+
             .navbar-light .navbar-nav .nav-link {
                 color: #4d3219;
             }
         }
+
         .btn-outline-white {
             border-color: #fff;
             color: #fff;
         }
+
         .btn-outline-white:hover {
             background-color: #fff;
             color: #8c6239;
         }
+
         .product-card {
             border: 1px solid #ddd;
             padding: 20px;
@@ -99,154 +116,192 @@
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
-            height: 100%; /* Ensure uniform height */
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
         }
+
         .product-card img {
-            transform: scale(4.5); 
+            transform: scale(4.5);
             transition: transform 0.3s;
         }
+
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .product-card .product-info {
             text-align: center;
             flex-grow: 1;
         }
+
         .product-card .product-title {
             font-size: 1.75rem;
             font-weight: bold;
             color: #8c6239;
             margin-bottom: 10px;
         }
+
         .product-card img {
             max-width: 100%;
             height: auto;
             margin-bottom: 20px;
             transition: transform 0.3s;
         }
+
         .product-card img:hover {
             transform: scale(5);
         }
+
         @media (max-width: 768px) {
             .product-card {
                 margin-bottom: 20px;
             }
         }
 
-        /* New Styles from Example Site */
         .flex {
             display: flex;
         }
+
         .font-serif {
             font-family: 'Merriweather', serif;
         }
+
         .flex-none {
             flex: none;
         }
+
         .relative {
             position: relative;
         }
+
         .absolute {
             position: absolute;
         }
-        .fab{
-    margin-top: 13px;
-}
+
+        .fab {
+            margin-top: 13px;
+        }
+
         .inset-0 {
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
         }
+
         .w-full {
             width: 100%;
         }
+
         .h-full {
             height: 100%;
         }
+
         .object-cover {
             object-fit: cover;
         }
+
         .rounded-lg {
             border-radius: 0.5rem;
         }
+
         .flex-auto {
             flex: 1 1 auto;
         }
+
         .p-6 {
             padding: 1.5rem;
         }
+
         .text-slate-900 {
             color: #1e293b;
         }
+
         .text-slate-500 {
             color: #6b7280;
         }
+
         .border-slate-200 {
             border-color: #e5e7eb;
         }
-        .peer-checked\:bg-slate-100:checked ~ .peer-checked\:bg-slate-100 {
+
+        .peer-checked\:bg-slate-100:checked~.peer-checked\:bg-slate-100 {
             background-color: #f1f5f9;
         }
-        .peer-checked\:text-slate-900:checked ~ .peer-checked\:text-slate-900 {
+
+        .peer-checked\:text-slate-900:checked~.peer-checked\:text-slate-900 {
             color: #1e293b;
         }
+
         .w-7 {
             width: 1.75rem;
         }
+
         .h-7 {
             height: 1.75rem;
         }
+
         .rounded-full {
             border-radius: 9999px;
         }
+
         .uppercase {
             text-transform: uppercase;
         }
+
         .font-medium {
             font-weight: 500;
         }
+
         .tracking-wider {
             letter-spacing: 0.05em;
         }
+
         .bg-slate-900 {
             background-color: #1e293b;
         }
+
         .text-white {
             color: #fff;
         }
+
         .border {
             border-width: 1px;
         }
+
         .border-slate-200 {
             border-color: #e5e7eb;
         }
+
         .w-12 {
             width: 3rem;
         }
+
         .h-12 {
             height: 3rem;
         }
+
         .text-slate-300 {
             color: #d1d5db;
         }
+
         .aria-hidden {
             visibility: hidden;
         }
+
         .aria-hidden:before {
             content: '\00a0';
         }
+
         .fill-current {
             fill: currentColor;
         }
 
-        /* Burger Icon Styles */
         .burger {
             width: 40px;
             height: 40px;
@@ -259,6 +314,7 @@
             transition: 300ms;
             border-radius: 10px;
         }
+
         .burger input[type="checkbox"] {
             appearance: none;
             transition: 300ms;
@@ -274,9 +330,11 @@
         .burger::before {
             transform: translateY(8px);
         }
+
         .burger::after {
             transform: translateY(-8px);
         }
+
         .burger .line,
         .burger::before,
         .burger::after {
@@ -292,14 +350,14 @@
             width: 0;
             transition-delay: 100ms;
         }
+
         .burger:has(.line:checked)::before {
             animation: animation1 400ms ease-out 0s 1 both;
         }
+
         .burger:has(.line:checked)::after {
             animation: animation2 400ms ease-out 0s 1 both;
         }
-
-      
 
         .burger:active {
             scale: 0.95;
@@ -309,9 +367,11 @@
             0% {
                 transform: translateY(8px) rotate(0deg);
             }
+
             50% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             100% {
                 transform: translateY(0px) rotate(45deg);
             }
@@ -321,15 +381,16 @@
             0% {
                 transform: translateY(-8px) rotate(0deg);
             }
+
             50% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             100% {
                 transform: translateY(0px) rotate(-45deg);
             }
         }
-        
-        /* Navbar CSS */
+
         .site-navbar-light {
             background: transparent !important;
             position: absolute;
@@ -346,7 +407,7 @@
             }
         }
 
-        .site-navbar-light .navbar-nav > .nav-item > .nav-link {
+        .site-navbar-light .navbar-nav>.nav-item>.nav-link {
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: .2em;
@@ -357,7 +418,7 @@
         }
 
         @media screen and (max-width: 960px) {
-            .site-navbar-light .navbar-nav > .nav-item > .nav-link {
+            .site-navbar-light .navbar-nav>.nav-item>.nav-link {
                 padding-bottom: 10px;
                 padding-left: 0px;
                 padding-right: 0px;
@@ -375,7 +436,6 @@
             letter-spacing: .1em;
         }
 
-        /* Media Queries for Burger Icon */
         @media (min-width: 992px) {
             .burger-icon {
                 display: none;
@@ -389,6 +449,7 @@
         }
     </style>
 </head>
+
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
 
     <!-- Navbar Section -->
@@ -396,7 +457,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Reckon Stone World Logo">
-                <span>Reckon </span>
+                <span>Reckon</span>
             </a>
             <div class="burger-icon d-lg-none">
                 <label class="burger" for="burger">
@@ -414,7 +475,6 @@
                 </ul>
             </div>
         </div>
-   
     </nav>
 
     <!-- Catalogue Section -->
@@ -424,204 +484,203 @@
                 <div class="col-md-12 text-center mb-5 site-animate">
                     <h4 class="site-sub-title">Our Products</h4>
                     <h2 class="display-4">Catalogue</h2>
-                   <div class="row justify-content-center">
-                       <div class="col-md-7">
-                           <p class="lead">Browse through our extensive catalogue of high-quality laterite stones suitable for various construction and decorative applications.</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="row">
-            <!-- Product Item 1 -->
-            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="100">
-                <div class="product-card mb-4">
-                    <img src="images/12inx7inx20mm.png" alt="Product 1" class="img-fluid">
-                    <div class="product-info">
-                        <h5 class="product-title">12x7x20 mm</h5>
+                    <div class="row justify-content-center">
+                        <div class="col-md-7">
+                            <p class="lead">Browse through our extensive catalogue of high-quality laterite stones suitable for various construction and decorative applications.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Product Item 2 -->
-            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="200">
-                <div class="product-card mb-4">
-                    <img src="images/12x6x6.png" alt="Product 2" class="img-fluid">
-                    <div class="product-info">
-                        <h5 class="product-title">12x6x3 inches</h5>
+            <div class="row">
+                <!-- Product Item 1 -->
+                <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card mb-4">
+                        <img src="images/12inx7inx20mm.png" alt="Product 1" class="img-fluid">
+                        <div class="product-info">
+                            <h5 class="product-title">12x7x20 mm</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Product Item 3 -->
-            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="300">
-                <div class="product-card mb-4">
-                    <img src="images/12x6x6.png" alt="Product 3" class="img-fluid">
-                    <div class="product-info">
-                        <h5 class="product-title">12x6x6 inches</h5>
+                <!-- Product Item 2 -->
+                <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card mb-4">
+                        <img src="images/12x6x6.png" alt="Product 2" class="img-fluid">
+                        <div class="product-info">
+                            <h5 class="product-title">12x6x3 inches</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Product Item 4 -->
-            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="400">
-                <div class="product-card mb-4">
-                    <img src="images/6inx6in20mm.png" alt="Product 4" class="img-fluid">
-                    <div class="product-info">
-                        <h5 class="product-title">6x6x20 mm</h5>
+                <!-- Product Item 3 -->
+                <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card mb-4">
+                        <img src="images/12x6x6.png" alt="Product 3" class="img-fluid">
+                        <div class="product-info">
+                            <h5 class="product-title">12x6x6 inches</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Product Item 5 -->
-            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="500">
-                <div class="product-card mb-4">
-                    <img src="images/12x7x8.png" alt="Product 5" class="img-fluid">
-                    <div class="product-info">
-                        <h5 class="product-title">12x7x8 inches</h5>
+                <!-- Product Item 4 -->
+                <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card mb-4">
+                        <img src="images/6inx6in20mm.png" alt="Product 4" class="img-fluid">
+                        <div class="product-info">
+                            <h5 class="product-title">6x6x20 mm</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Product Item 6 -->
-            <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="600">
-                <div class="product-card mb-4">
-                    <img src="images/9x4x3.png" alt="Product 6" class="img-fluid">
-                    <div class="product-info">
-                        <h5 class="product-title">9x4x3 inches</h5>
+                <!-- Product Item 5 -->
+                <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-card mb-4">
+                        <img src="images/12x7x8.png" alt="Product 5" class="img-fluid">
+                        <div class="product-info">
+                            <h5 class="product-title">12x7x8 inches</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Item 6 -->
+                <div class="col-md-4 px-2 py-2" data-aos="fade-up" data-aos-delay="600">
+                    <div class="product-card mb-4">
+                        <img src="images/9x4x3.png" alt="Product 6" class="img-fluid">
+                        <div class="product-info">
+                            <h5 class="product-title">9x4x3 inches</h5>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-       </div>
-   </section>
+    </section>
 
-   <!-- Footer Section -->
-   <footer class="site-footer site-bg-brown site-section">
-       <div class="container">
-           <div class="row mb-5">
-               <div class="col-md-12">
-                   <div class="row">
-                       <div class="col-md-4 site-animate">
-                           <h2 class="site-heading-2">About Us</h2>
-                           <p>Reckon Stone World is dedicated to providing top-quality laterite stones for construction and decoration. Our stones are known for their durability and aesthetic appeal, making them the perfect choice for any project.</p>
-                       </div>
-                       <div class="col-md-1"></div>
-                       <div class="col-md-3 site-animate">
-                           <div class="site-footer-widget mb-4">
-                               <h2 class="site-heading-2">Our Company</h2>
-                               <ul class="list-unstyled">
-                                   <li><a href="index.html#section-about" class="py-2 d-block">About Us</a></li>
-                                   <li><a href="index.html#section-products" class="py-2 d-block">Products</a></li>
-                                   <li><a href="index.html#section-gallery" class="py-2 d-block">Gallery</a></li>
-                                   <li><a href="index.html#section-contact" class="py-2 d-block">Contact</a></li>
-                               </ul>
-                           </div>
-                       </div>
-                       <div class="col-md-2 site-animate">
-                           <div class="site-footer-widget mb-4">
-                               <h2 class="site-heading-2">Products</h2>
-                               <ul class="list-unstyled">
-                                   <li><a href="#" class="py-2 d-block">Stones for Houses</a></li>
-                                   <li><a href="#" class="py-2 d-block">Wall Stones</a></li>
-                                   <li><a href="#" class="py-2 d-block">Decorative Stones</a></li>
-                               </ul>
-                           </div>
-                       </div>
-                       <div class="col-md-2 site-animate">
-                        <div class="site-footer-widget mb-4">
-                            <h2 class="site-heading-2">Contact</h2>
-                            <p class="text-white">
-                                Address: <br>
-                                <a href="">Aloor ,Thrissur </a> <br>
-                                <a href="">Kerala </a> <br><br>
-                                Phone: <br>
-                                <a href="tel:+91 9656547655">+91 9656547655</a> <br><br>
-                               
-                            </p>
+    <!-- Footer Section -->
+    <footer class="site-footer site-bg-brown site-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 site-animate">
+                            <h2 class="site-heading-2">About Us</h2>
+                            <p>Reckon Stone World is dedicated to providing top-quality laterite stones for construction and decoration. Our stones are known for their durability and aesthetic appeal, making them the perfect choice for any project.</p>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3 site-animate">
+                            <div class="site-footer-widget mb-4">
+                                <h2 class="site-heading-2">Our Company</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="index.html#section-about" class="py-2 d-block">About Us</a></li>
+                                    <li><a href="index.html#section-products" class="py-2 d-block">Products</a></li>
+                                    <li><a href="index.html#section-gallery" class="py-2 d-block">Gallery</a></li>
+                                    <li><a href="index.html#section-contact" class="py-2 d-block">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 site-animate">
+                            <div class="site-footer-widget mb-4">
+                                <h2 class="site-heading-2">Products</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="py-2 d-block">Stones for Houses</a></li>
+                                    <li><a href="#" class="py-2 d-block">Wall Stones</a></li>
+                                    <li><a href="#" class="py-2 d-block">Decorative Stones</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 site-animate">
+                            <div class="site-footer-widget mb-4">
+                                <h2 class="site-heading-2">Contact</h2>
+                                <p class="text-white">
+                                    Address: <br>
+                                    <a href="#">Aloor, Thrissur</a> <br>
+                                    <a href="#">Kerala</a> <br><br>
+                                    Phone: <br>
+                                    <a href="tel:+91 9656547655">+91 9656547655</a> <br><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                   </div>
-               </div>
-           </div>
-           <div class="row site-animate">
-              
-            
-            <div class="col-md-12 text-center">
-                <div class="site-footer-widget mb-4">
-                    <h2 class="site-heading-2">Follow Us</h2>
-                    <ul class="site-footer-social list-unstyled">
-                        <li class="site-animate">
-                            <a href="https://wa.me/+9656547655" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp fa-2x" ></i>
-                            </a>
-                        </li>
-                        <li class="site-animate">
-                            <a href="https://www.facebook.com/Reckonstoneworld" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-facebook-f fa-2x"></i>
-                            </a>
-                        </li>
-                        <li class="site-animate">
-                            <a href="https://www.instagram.com/reckon_stone_world/" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-instagram fa-2x "></i>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
+            <div class="row site-animate">
+                <div class="col-md-12 text-center">
+                    <div class="site-footer-widget mb-4">
+                        <h2 class="site-heading-2">Follow Us</h2>
+                        <ul class="site-footer-social list-unstyled">
+                            <li class="site-animate">
+                                <a href="https://wa.me/+9656547655" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="site-animate">
+                                <a href="https://www.facebook.com/Reckonstoneworld" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-facebook-f fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="site-animate">
+                                <a href="https://www.instagram.com/reckon_stone_world/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p>&copy; <script>
+                            document.write(new Date().getFullYear());
+                        </script> Reckon Stone World. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-               <div class="col-md-12 text-center">
-                   <p>&copy; <script>document.write(new Date().getFullYear());</script> Reckon Stone World. All rights reserved.</p>
-               </div>
-           </div>
-       </div>
-   </footer>
+    <!-- Loader Section -->
+    <div id="site-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle>
+        </svg>
+    </div>
 
-   <!-- Loader Section -->
-   <div id="site-loader" class="show fullscreen">
-       <svg class="circular" width="48px" height="48px">
-           <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
-           <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle>
-       </svg>
-   </div>
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 
-   <!-- JavaScript Libraries -->
-   <script src="js/jquery.min.js"></script>
-   <script src="js/popper.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script src="js/jquery.easing.1.3.js"></script>
-   <script src="js/jquery.waypoints.min.js"></script>
-   <script src="js/owl.carousel.min.js"></script>
-   <script src="js/jquery.magnific-popup.min.js"></script>
-   <script src="js/bootstrap-datepicker.js"></script>
-   <script src="js/jquery.timepicker.min.js"></script>
-   <script src="js/jquery.animateNumber.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-   <script src="js/main.js"></script>
+    <!-- Custom Script for Navbar Scrolling -->
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('.navbar').addClass('scrolled');
+                } else {
+                    $('.navbar').removeClass('scrolled');
+                }
+            });
 
-   <!-- Custom Script for Navbar Scrolling -->
-   <script>
-       $(document).ready(function () {
-           $(window).scroll(function () {
-               if ($(this).scrollTop() > 50) {
-                   $('.navbar').addClass('scrolled');
-               } else {
-                   $('.navbar').removeClass('scrolled');
-               }
-           });
-           AOS.init();
+            AOS.init();
 
-           $('#burger').on('change', function () {
-               if ($(this).is(':checked')) {
-                   $('#site-nav').collapse('show');
-               } else {
-                   $('#site-nav').collapse('hide');
-               }
-           });
+            $('#burger').on('change', function() {
+                if ($(this).is(':checked')) {
+                    $('#site-nav').collapse('show');
+                } else {
+                    $('#site-nav').collapse('hide');
+                }
+            });
 
-           $('#site-nav').on('shown.bs.collapse', function () {
-               $('#burger').prop('checked', true);
-           });
+            $('#site-nav').on('shown.bs.collapse', function() {
+                $('#burger').prop('checked', true);
+            });
 
-           $('#site-nav').on('hidden.bs.collapse', function () {
-               $('#burger').prop('checked', false);
-           });
-       });
-   </script>
+            $('#site-nav').on('hidden.bs.collapse', function() {
+                $('#burger').prop('checked', false);
+            });
+        });
+    </script>
 </body>
+
 </html>
