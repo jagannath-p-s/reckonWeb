@@ -4,7 +4,7 @@
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Reckon Stone World - Laterite Stone Manufacturing">
     <meta name="keywords" content="Reckon Stone World, laterite stones, stone manufacturing, stones for houses, wall stones, decorative stones">
 
@@ -34,10 +34,23 @@
 
     <!-- Custom Styles -->
     <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-color: #f0e8d8;
             color: #333;
             font-family: 'Merriweather', serif;
+            -webkit-font-smoothing: antialiased; /* Improve font rendering on Safari */
         }
 
         .navbar-dark {
@@ -50,7 +63,7 @@
 
         .navbar-light .navbar-nav .nav-link {
             color: #333;
-        
+            font-family: 'Open Sans', sans-serif;
         }
 
         .site-footer {
@@ -105,6 +118,13 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            -webkit-transition: transform 0.3s, box-shadow 0.3s;
+            -moz-transition: transform 0.3s, box-shadow 0.3s;
+            -o-transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .product-card img {
@@ -112,10 +132,21 @@
             height: auto;
             margin-bottom: 20px;
             transition: transform 0.3s;
+            -webkit-transition: transform 0.3s;
+            -moz-transition: transform 0.3s;
+            -o-transition: transform 0.3s;
+            transition: transform 0.3s;
         }
 
         .product-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            -webkit-transform: translateY(-10px);
+            -moz-transform: translateY(-10px);
+            -o-transform: translateY(-10px);
+            transform: translateY(-10px);
+            -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
@@ -319,8 +350,6 @@
 
             .navbar-nav .nav-item .nav-link {
                 padding: 10px;
-                
-                
             }
 
             .site-heading-container h1 {
@@ -345,21 +374,34 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+            -moz-transition: opacity 0.6s ease-out, -moz-transform 0.6s ease-out;
+            -o-transition: opacity 0.6s ease-out, -o-transform 0.6s ease-out;
         }
 
         .fade-in.aos-animate {
             opacity: 1;
             transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -o-transform: translateY(0);
         }
 
         .fade-up {
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+            -moz-transition: opacity 0.6s ease-out, -moz-transform 0.6s ease-out;
+            -o-transition: opacity 0.6s ease-out, -o-transform 0.6s ease-out;
         }
 
         .fade-up.aos-animate {
             opacity: 1;
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -o-transform: translateY(0);
             transform: translateY(0);
         }
 
@@ -367,10 +409,19 @@
             opacity: 0;
             transform: scale(0.8);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+            -moz-transition: opacity 0.6s ease-out, -moz-transform 0.6s ease-out;
+            -ms-transition: opacity 0.6s ease-out, -ms-transform 0.6s ease-out;
+            -o-transition: opacity 0.6s ease-out, -o-transform 0.6s ease-out;
         }
 
         .zoom-in.aos-animate {
             opacity: 1;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
             transform: scale(1);
         }
 
@@ -378,6 +429,9 @@
             width: 80%;
             height: auto;
             transition: transform 0.3s ease-in-out;
+            -webkit-transition: transform 0.3s ease-in-out;
+            -moz-transition: transform 0.3s ease-in-out;
+            -o-transition: transform 0.3s ease-in-out;
         }
 
         .fab {
@@ -405,6 +459,7 @@
         @media (max-width: 767.98px) {
             body {
                 overflow-x: hidden;
+                -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on Safari */
             }
         }
 
@@ -492,9 +547,6 @@
         .navbar-dark .navbar-nav .nav-link.active {
             color: #ffc107; /* Amber */
         }
-        .site-navbar-light .navbar-nav > .nav-item > .nav-link {
-            font-family: 'Open Sans', sans-serif; /* Updated font family */
-}
 
         /* Vendor Prefixes for Cross-Browser Compatibility */
         .product-card {
@@ -767,19 +819,19 @@
                 <div class="swiper-wrapper">
                     <!-- Video Item 1 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
-                        <video class="plyr" playsinline controls>
+                        <video class="plyr" playsinline controls preload="metadata" poster="images/thumbnail1.jpg">
                             <source src="images/Video-17.mp4" type="video/mp4">
                         </video>
                     </div>
                     <!-- Video Item 2 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
-                        <video class="plyr" playsinline controls>
+                        <video class="plyr" playsinline controls preload="metadata" poster="images/thumbnail2.jpg">
                             <source src="images/Video-18.mp4" type="video/mp4">
                         </video>
                     </div>
                     <!-- Video Item 3 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
-                        <video class="plyr" playsinline controls>
+                        <video class="plyr" playsinline controls preload="metadata" poster="images/thumbnail3.jpg">
                             <source src="images/Video-230.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -797,7 +849,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <h6 class="highlight1">SCAN QR CODE</h6>
-                    <img src="images/frame.png" alt="QR Code">
+                    <img src="images/frame.png" style="padding: 2px;" alt="QR Code">
                     <a href="images/reckoncatalogue.pdf" download="reckoncatalogue.pdf" class="btn-download"><i class="bi bi-download"></i> Download Catalogue</a>
                 </div>
                 <div class="col-md-6 text-left qr-text">
