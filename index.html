@@ -38,9 +38,10 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        html, body {
+        html,
+        body {
             -webkit-overflow-scrolling: touch;
-            overflow-x: hidden;
+    
             width: 100%;
             margin: 0;
             padding: 0;
@@ -50,7 +51,7 @@
             background-color: #f0e8d8;
             color: #333;
             font-family: 'Merriweather', serif;
-            -webkit-font-smoothing: antialiased; /* Improve font rendering on Safari */
+            -webkit-font-smoothing: antialiased;
         }
 
         .navbar-dark {
@@ -249,7 +250,10 @@
         .burger:active {
             scale: 0.95;
         }
+        .site-navbar-light .navbar-nav > .nav-item > .nav-link {
 
+    font-family: 'Open Sans', sans-serif;
+}
         @keyframes animation1 {
             0% {
                 transform: translateY(8px) rotate(0deg);
@@ -333,7 +337,6 @@
             background-color: black !important;
         }
 
-        /* Animations and styles for mobile */
         @media (max-width: 767.98px) {
             .product-card {
                 padding: 15px;
@@ -365,6 +368,7 @@
                 padding: 10px 20px;
             }
         }
+
 
         .aos-animate {
             transition: all 0.3s ease-in-out;
@@ -413,6 +417,7 @@
             -moz-transition: opacity 0.6s ease-out, -moz-transform 0.6s ease-out;
             -ms-transition: opacity 0.6s ease-out, -ms-transform 0.6s ease-out;
             -o-transition: opacity 0.6s ease-out, -o-transform 0.6s ease-out;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
         .zoom-in.aos-animate {
@@ -438,7 +443,6 @@
             margin-top: 13px;
         }
 
-        /* Add custom padding and margin for the section on mobile view */
         @media (max-width: 767.98px) {
             .about-text {
                 padding: 15px;
@@ -459,11 +463,10 @@
         @media (max-width: 767.98px) {
             body {
                 overflow-x: hidden;
-                -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on Safari */
+                -webkit-overflow-scrolling: touch;
             }
         }
 
-        /* Custom styles for Swiper carousel */
         @media (min-width: 768px) {
             .gallery-container {
                 display: flex;
@@ -518,7 +521,6 @@
             }
         }
 
-        /* Plyr custom styles */
         .plyr {
             width: 100%;
             height: auto;
@@ -545,10 +547,9 @@
         }
 
         .navbar-dark .navbar-nav .nav-link.active {
-            color: #ffc107; /* Amber */
+            color: #ffc107;
         }
 
-        /* Vendor Prefixes for Cross-Browser Compatibility */
         .product-card {
             -webkit-transition: transform 0.3s, box-shadow 0.3s;
             -moz-transition: transform 0.3s, box-shadow 0.3s;
@@ -647,6 +648,14 @@
             -o-transform: scale(1);
             transform: scale(1);
         }
+
+        @media (max-width: 767.98px) {
+            .no-aos-mobile {
+                pointer-events: none;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -687,7 +696,7 @@
             <h1 class="site-heading site-animate">Welcome To Reckon Stone World</h1>
             <h2 class="h5 site-subheading site-animate">High-quality laterite stones for your construction and decoration needs.</h2>
             <p>
-                <a href="#section-contact" class="btn btn-outline-white btn-lg site-animate" data-aos="fade-up" data-aos-duration="1000">Get in Touch</a>
+                <a href="#section-contact" class="btn btn-outline-white btn-lg site-animate no-aos-mobile" data-aos="fade-up" data-aos-duration="1000">Get in Touch</a>
             </p>
         </div>
     </section>
@@ -726,7 +735,6 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                        <!-- Product Item 1 -->
                         <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="100">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
@@ -738,7 +746,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Product Item 2 -->
                         <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="200">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
@@ -750,7 +757,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Product Item 3 -->
                         <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="300">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
@@ -784,15 +790,12 @@
             </div>
             <div class="swiper-container gallery-container">
                 <div class="swiper-wrapper">
-                    <!-- Gallery Item 1 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
                         <img src="images/gallery1.jpeg" alt="Gallery Image 1" class="img-fluid">
                     </div>
-                    <!-- Gallery Item 2 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
                         <img src="images/gallery2.jpg" alt="Gallery Image 2" class="img-fluid">
                     </div>
-                    <!-- Gallery Item 3 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
                         <img src="images/gallery3.jpg" alt="Gallery Image 3" class="img-fluid">
                     </div>
@@ -817,19 +820,16 @@
             </div>
             <div class="swiper-container videos-container">
                 <div class="swiper-wrapper">
-                    <!-- Video Item 1 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="100">
                         <video class="plyr" playsinline controls preload="metadata" poster="images/thumbnail1.jpg">
                             <source src="images/Video-17.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <!-- Video Item 2 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="200">
                         <video class="plyr" playsinline controls preload="metadata" poster="images/thumbnail2.jpg">
                             <source src="images/Video-18.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <!-- Video Item 3 -->
                     <div class="swiper-slide col-md-4 site-animate" data-aos="fade-up" data-aos-delay="300">
                         <video class="plyr" playsinline controls preload="metadata" poster="images/thumbnail3.jpg">
                             <source src="images/Video-230.mp4" type="video/mp4">
@@ -979,17 +979,15 @@
                         var element_top_position = $element.offset().top;
                         var element_bottom_position = (element_top_position + element_height);
 
-                        // Check to see if this current container is within viewport
                         if ((element_bottom_position >= window_top_position) &&
                             (element_top_position <= window_bottom_position)) {
                             if (!$element.hasClass('in-view')) {
                                 $element.addClass('in-view');
-                                $element.addClass('animated-once'); // Add class indicating animation triggered
+                                $element.addClass('animated-once');
                             }
                         }
                     });
 
-                    // Set the flag to true after triggering the animations
                     animationsTriggered = true;
                 }
             }
@@ -997,16 +995,13 @@
             $window.on('scroll resize', function() {
                 check_if_in_view();
 
-                // Remove the scroll event listener after triggering the animations
                 if (animationsTriggered) {
                     $window.off('scroll resize', check_if_in_view);
                 }
             });
 
-            // Initial check
             check_if_in_view();
 
-            // Custom Script for Navbar Scrolling
             let scrollTriggered = false;
 
             function handleScroll() {
@@ -1023,9 +1018,24 @@
 
             AOS.init({
                 duration: 1000,
+                disable: 'mobile', // Disable AOS on mobile devices
+                offset: 200,
             });
 
-            // Scroll to top button functionality
+            function disableAOSOnMobile() {
+                if (window.innerWidth < 768) {
+                    $('.no-aos-mobile').each(function() {
+                        $(this).removeAttr('data-aos');
+                        $(this).removeAttr('data-aos-duration');
+                    });
+                }
+            }
+
+            disableAOSOnMobile();
+            $(window).on('resize', function() {
+                disableAOSOnMobile();
+            });
+
             $('.scroll-to-top').click(function() {
                 $('html, body').animate({
                     scrollTop: 0
@@ -1033,7 +1043,6 @@
                 return false;
             });
 
-            // Custom Script for Background Image Rotation
             if (window.innerWidth < 768) {
                 let currentIndex = 0;
                 const images = $('.site-cover .bg');
@@ -1107,12 +1116,10 @@
                 initSwipers();
             });
 
-            // Fullscreen mode for images/videos
             $('.swiper-slide img, .swiper-slide video').on('click', function() {
                 $(this).toggleClass('fullscreen');
             });
 
-            // Pinch-to-zoom functionality
             $('.swiper-slide img').each(function() {
                 $(this).panzoom({
                     $zoomIn: $(".zoom-in"),
@@ -1125,12 +1132,10 @@
                 });
             });
 
-            // Loading indicators
             $('.swiper-slide img, .swiper-slide video').on('load', function() {
                 $(this).closest('.swiper-slide').addClass('loaded');
             });
 
-            // Initialize Plyr
             const players = Plyr.setup('.plyr', {
                 controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
                 ratio: '9:16',
@@ -1138,7 +1143,6 @@
                 autoplay: false,
             });
 
-            // Pause all videos when Swiper slides change
             var videosSwiper = new Swiper('.videos-container', {
                 slidesPerView: 1,
                 spaceBetween: 10,
@@ -1172,7 +1176,6 @@
                 },
             });
 
-            // Stop carousel autoplay when video is played
             players.forEach(function(player) {
                 player.on('play', function() {
                     videosSwiper.autoplay.stop();
