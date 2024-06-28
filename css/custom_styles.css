@@ -75,13 +75,13 @@ body {
 .site-cover .bg.active {
     opacity: 1;
 }
-.site-cover .bg.bg3 {
-    background-image: url('../images/bg1.jpeg');
-}
-.site-cover .bg.bg2 {
+.site-cover .bg.bg1 {
     background-image: url('../images/bg2.jpeg');
 }
-.site-cover .bg.bg1 {
+.site-cover .bg.bg2 {
+    background-image: url('../images/bg1.jpeg');
+}
+.site-cover .bg.bg3 {
     background-image: url('../images/bg3.jpeg');
 }
 .site-heading-container {
@@ -222,8 +222,7 @@ body {
     padding: 50px 0;
     background-color: #fff;
     color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 .qr-section img {
     max-width: 150px;
