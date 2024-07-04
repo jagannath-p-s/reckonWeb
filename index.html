@@ -102,6 +102,14 @@
             background-color: #fff;
             color: #6b4226;
         }
+        .site-footer-social {
+    display: flex;
+    justify-content: center;
+}
+
+.site-footer-social li {
+    margin: 0 10px; /* Adjust the margin as needed for spacing */
+}
 
         .product-card {
             border: 1px solid #ddd;
@@ -675,6 +683,13 @@
                 transform: none !important;
             }
         }
+        @media (max-width: 767.98px) {
+    .footer-phone {
+        margin-top: -3rem; /* Reduce the bottom margin for all footer widgets */
+    }
+   
+}
+        
     </style>
 </head>
 
@@ -737,17 +752,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="100">
-                            <div class="product-card site-animate">
-                                <div class="media d-block mb-4 text-center site-media">
-                                    <img src="images/prod1.jpg" alt="Product 1" class="img-fluid product-image">
-                                    <div class="media-body p-md-5 p-4">
-                                        <h5 class="mt-0 h4 product-title">Stones for Houses</h5>
-                                        <p class="mb-4 product-description">Durable and aesthetically pleasing stones perfect for building houses and other structures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                     
                         <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="200">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
@@ -759,6 +764,7 @@
                                 </div>
                             </div>
                         </div>
+                   
                         <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="300">
                             <div class="product-card site-animate">
                                 <div class="media d-block mb-4 text-center site-media">
@@ -766,6 +772,17 @@
                                     <div class="media-body p-md-5 p-4">
                                         <h5 class="mt-0 h4 product-title">Decorative Stones</h5>
                                         <p class="mb-4 product-description">Enhance the beauty of your space with our exquisite decorative laterite stones.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4 px-2 py-2" data-aos="fade-up" data-aos-delay="100">
+                            <div class="product-card site-animate">
+                                <div class="media d-block mb-4 text-center site-media">
+                                    <img src="images/prod1.jpg" alt="Product 1" class="img-fluid product-image">
+                                    <div class="media-body p-md-5 p-4">
+                                        <h5 class="mt-0 h4 product-title">Stones for Houses</h5>
+                                        <p class="mb-4 product-description">Durable and aesthetically pleasing stones perfect for building houses and other structures.</p>
                                     </div>
                                 </div>
                             </div>
@@ -881,83 +898,86 @@
         </section>
 
     <!-- Footer Section -->
-    <footer class="site-footer site-bg-brown site-section" id="section-contact" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <div class="row mb=5">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3 site-animate">
-                            <div class="site-footer-widget mb=4">
-                                <h2 class="site-heading-2">Our Company</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="#section-about" class="py-2 d-block">About Us</a></li>
-                                    <li><a href="#section-products" class="py-2 d-block">Products</a></li>
-                                    <li><a href="#section-gallery" class="py-2 d-block">Gallery</a></li>
-                                    <li><a href="#section-contact" class="py-2 d-block">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-2 site-animate">
-                            <div class="site-footer-widget mb-4">
-                                <h2 class="site-heading-2">Products</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="py-2 d-block">Stones for Houses</a></li>
-                                    <li><a href="#" class="py-2 d-block">Wall Stones</a></li>
-                                    <li><a href="#" class="py-2 d-block">Decorative Stones</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-2 site-animate">
-                            <div class="site-footer-widget mb-4">
-                                <h2 class="site-heading-2">Contact</h2>
-                                <p class="text-white contact-info">
-                                    <strong>Address:</strong><br>
-                                    <span  >Aloor, Thrissur, Kerala</span><br>
-                                    <span >Iritty, Kannur, Kerala</span><br><br>
-                                    
-                                    <strong>Phone:</strong><br>
-                                    <a href="tel:+919656547655">+91 9656547655</a>
-                                </p>
-                            </div>
-                            
-                            
+        <!-- Footer Section -->
+<footer class="site-footer site-bg-brown site-section" id="section-contact" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 site-animate">
+                        <div class="site-footer-widget mb-4">
+                            <h2 class="site-heading-2">Our Company</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#section-about" class="py-2 d-block">About Us</a></li>
+                                <li><a href="#section-products" class="py-2 d-block">Products</a></li>
+                                <li><a href="#section-gallery" class="py-2 d-block">Gallery</a></li>
+                                <li><a href="#section-contact" class="py-2 d-block">Contact</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row site-animate">
-                <div class="col-md-12 text-center">
-                    <div class="site-footer-widget mb-4">
-                        <h2 class="site-heading-2">Follow Us</h2>
-                        <ul class="site-footer-social list-unstyled">
-                            <li class="site-animate">
-                                <a href="https://wa.me/+9656547655" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-whatsapp fa-2x"></i>
-                                </a>
-                            </li>
-                            <li class="site-animate">
-                                <a href="https://www.facebook.com/Reckonstoneworld" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-facebook-f fa-2x"></i>
-                                </a>
-                            </li>
-                            <li class="site-animate">
-                                <a href="https://www.instagram.com/reckon_stone_world/" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-instagram fa-2x"></i>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="col-md-3 site-animate">
+                        <div class="site-footer-widget mb-4">
+                            <h2 class="site-heading-2">Products</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-2 d-block">Stones for Houses</a></li>
+                                <li><a href="#" class="py-2 d-block">Wall Stones</a></li>
+                                <li><a href="#" class="py-2 d-block">Decorative Stones</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    <p>&copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script> Reckon Stone World. All rights reserved.</p>
+                    <div class="col-md-3 site-animate">
+                        <div class="site-footer-widget mb-4">
+                            <h2 class="site-heading-2">Address</h2>
+                            <p class="text-white contact-info">
+                                <span>Aloor, Thrissur, Kerala</span><br>
+                                <span>Iritty, Kannur, Kerala</span><br><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 site-animate footer-phone">
+                        <div class="site-footer-widget mb-4">
+                            <h2 class="site-heading-2">Phone</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="tel:+919656547655" class="py-2 d-block">+91 9656547655</a></li>
+                                <li><a href="tel:+919744697896" class="py-2 d-block">+91 9744697896</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="row site-animate">
+            <div class="col-md-12 text-center">
+                <div class="site-footer-widget mb-4">
+                    <h2 class="site-heading-2">Follow Us</h2>
+                    <ul class="site-footer-social list-unstyled d-flex justify-content-center">
+                        <li class="site-animate mx-2">
+                            <a href="https://wa.me/+9656547655" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="site-animate mx-2">
+                            <a href="https://www.facebook.com/Reckonstoneworld" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="site-animate mx-2">
+                            <a href="https://www.instagram.com/reckon_stone_world/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> Reckon Stone World. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
 
     <!-- Loader Section -->
     <div id="site-loader" class="show fullscreen">
